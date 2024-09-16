@@ -1,0 +1,582 @@
+/* Estilos para telas pequenas (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Ajuste a largura da barra lateral para ocupar a largura da tela */
+  }
+  .content {
+    margin-left: 0; /* Não use margem à esquerda no conteúdo principal */
+  }
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Ajuste a cor de fundo */
+    color: #fff; /* Ajuste a cor do texto */
+    text-align: center; /* Centralize o texto horizontalmente */
+    padding: 10px 0; /* Reduza o preenchimento superior e inferior */
+  }
+  .topbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centralize os itens da lista horizontalmente */
+    padding: 0;
+  }
+  .topbar a {
+    text-decoration: none;
+    color: rgb(4, 151, 28);
+    font-weight: bold;
+    padding: 10px 20px; /* Reduza o preenchimento esquerdo e direito */
+    font-family: 'Roboto Mono', monospace;
+  }
+  #splash-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+  #calculadora-apresentacao {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+    color: rgb(4, 151, 28);
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #content {
+    display: none;
+  }
+}
+
+/* Estilos para telas médias (largura 2) - Ajuste os valores de acordo com as suas necessidades */
+/* Estilos para dispositivos com largura entre 481px e 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Ajuste a largura da barra lateral para ocupar a largura da tela */
+  }
+  .content {
+    margin-left: 0; /* Não use margem à esquerda no conteúdo principal */
+  }
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Ajuste a cor de fundo */
+    color: #fff; /* Ajuste a cor do texto */
+    text-align: center; /* Centralize o texto horizontalmente */
+    padding: 10px 0; /* Reduza o preenchimento superior e inferior */
+  }
+  .topbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centralize os itens da lista horizontalmente */
+    padding: 0;
+  }
+  .topbar a {
+    text-decoration: none;
+    color: rgb(4, 151, 28);
+    font-weight: bold;
+    padding: 10px 20px; /* Reduza o preenchimento esquerdo e direito */
+    font-family: 'Roboto Mono', monospace;
+  }
+  #splash-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+  #calculadora-apresentacao {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+    color: rgb(4, 151, 28);
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #content {
+    display: none;
+  }
+}
+
+
+/* Estilos para telas médias (largura 3) - Ajuste os valores de acordo com as suas necessidades */
+/* Estilos para dispositivos com largura entre 769px e 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 100%; /* Ajuste a largura da barra lateral para ocupar a largura da tela */
+  }
+  .content {
+    margin-left: 0; /* Não use margem à esquerda no conteúdo principal */
+  }
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Ajuste a cor de fundo */
+    color: #fff; /* Ajuste a cor do texto */
+    text-align: center; /* Centralize o texto horizontalmente */
+    padding: 10px 0; /* Reduza o preenchimento superior e inferior */
+  }
+  .topbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centralize os itens da lista horizontalmente */
+    padding: 0;
+  }
+  .topbar a {
+    text-decoration: none;
+    color: rgb(4, 151, 28);
+    font-weight: bold;
+    padding: 10px 20px; /* Reduza o preenchimento esquerdo e direito */
+    font-family: 'Roboto Mono', monospace;
+  }
+  #splash-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+  #calculadora-apresentacao {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+    color: rgb(4, 151, 28);
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #content {
+    display: none;
+  }
+}
+
+
+/* Estilos gerais para todas as larguras de tela */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  background-image: url('arnaud-papa-nuW1WqqDzsU-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(4, 151, 28);
+  font-size: 18px;
+  animation: scrollBackground 5s linear infinite;
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* Estilos gerais */
+body {
+  margin: 10;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  margin: 0;
+  padding: 0;
+  background-image: url('arnaud-papa-nuW1WqqDzsU-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(4, 151, 28);
+  font-size: 18px;
+  animation: scrollBackground 5s linear infinite;
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* Restante do seu código CSS */
+header {
+  background-image: url('arnaud-papa-nuW1WqqDzsU-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-family: cursive;
+  color: rgb(6, 64, 181);
+  position: relative;
+  z-index: 999;
+  font-size: 24px;
+  margin-bottom: 20px; /* Adicione esta linha para ajustar o espaçamento entre o header e o conteúdo abaixo */
+}
+
+main {
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* Estilos para os itens da lista (li) */
+li {
+  display: inline;
+  margin-block-start: 40px;
+}
+
+/* Estilos para os links (a) dentro dos itens da lista */
+li a {
+  text-decoration: none;
+  color: #043cab;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Estilos para seções */
+section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+/* Estilos para cabeçalhos de seção */
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: rgb(4, 151, 28);
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 150px; /* Largura da barra lateral */
+  height: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  font-family: 'Roboto Mono', monospace; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
+  font-size: 20px; /* Aumentar o tamanho das letras para a seção "Projetos" */
+  color: rgb(4, 151, 28);
+  padding: 20px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-family: 'Roboto Mono', monospace; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
+  font-size: 20px; /* Aumentar o tamanho das letras para a seção "Projetos" */
+  color: rgb(4, 151, 28);
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+  margin-left: 220px; /* Largura da barra lateral + margem */
+  padding: 20px;
+}
+
+/* Estilos para a seção "Sobre" */
+/* Estilos para a seção "Sobre" */
+#sobre {
+  margin: auto;
+  padding: 20px; /* Aumente o preenchimento interno para o conteúdo */
+  background-color: transparent;
+  border-radius: 5px;
+  text-align: left;
+  color: rgb(4, 151, 28);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  margin-left: 20px; /* Reduza a margem esquerda para ajustar ao conteúdo */
+  margin-right: 20px; /* Reduza a margem direita para ajustar ao conteúdo */
+}
+
+#sobre img {
+  max-width: 200px;
+  float: right;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+#sobre h2 {
+  text-align: left; /* Alinhe o título à esquerda */
+  color: rgb(4, 151, 28);
+  font-size: 1.8rem;
+}
+
+#sobre p {
+  text-align: left;
+  color: rgb(4, 151, 28);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0; /* Reduza a margem esquerda para ajustar ao conteúdo */
+  margin-right: 0; /* Reduza a margem direita para ajustar ao conteúdo */
+}
+
+#sobre .perfil-image {
+  float: left;
+  margin-right: 20px; /* Ajuste conforme necessário */
+}
+
+.perfil-image {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  float: left; /* Adicione esta linha para alinhar a imagem à esquerda */
+  margin-right: 20px; /* Adicione um espaçamento à direita para separar a imagem do texto */
+  margin-bottom: 10px;
+}
+
+
+/* Estilos para a seção "Projetos" */
+#projetos {
+  margin: auto;
+  padding: auto;
+  background-color: transparent;
+  font-family: 'Roboto Mono', sans-serif; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
+  font-size: 20px; /* Aumentar o tamanho das letras para a seção "Projetos" */
+  text-align: left; /* Alinhe o texto à esquerda */
+  margin-left: 10px; /* Adicione margem à esquerda */
+  margin-right: 10px; /* Adicione margem à direita */
+  color: rgb(4, 151, 28);
+}
+
+/* Estilos para projetos dentro da seção "Projetos" */
+/* Estilos para projetos */
+.projeto {
+  background-image: url('StockSnap_D91B1NOVLJ.jpg');
+  background-size: cover; /* Ajusta o tamanho da imagem de fundo para cobrir todo o elemento */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  background-position: center; /* Centraliza a imagem de fundo horizontalmente */
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-family: 'Roboto Mono', sans-serif; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
+  font-size: 20px; /* Aumentar o tamanho das letras para a seção "Projetos" */
+  color: rgb(4, 151, 28); /* Defina a cor do texto como verde */
+}
+
+/* Estilos para o título do projeto */
+.projeto h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: rgb(4, 151, 28); /* Defina a cor das letras como verde */
+}
+
+/* Estilos para o texto do projeto */
+.projeto p {
+  color: rgb(4, 151, 28); /* Defina a cor das letras como verde */
+}
+
+.projeto img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#resultado {
+  background-image: url('StockSnap_D91B1NOVLJ.jpg'); /* Manter a imagem de fundo */
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-family: 'Roboto Mono', sans-serif; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
+  font-size: 20px; /* Aumentar o tamanho das letras para a seção "Projetos" */
+  color: rgb(4, 151, 28); /* Defina a cor do texto como verde */
+}
+
+/* Estilos para a apresentação dos resultados da calculadora */
+.resultado-item {
+  background-image: url('StockSnap_D91B1NOVLJ.jpg');
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  /* Remova as margens e a sombra */
+  margin: 0; /* Remova margens */
+  box-shadow: none; /* Remova a sombra */
+  /* Ajuste a largura para preencher a tela */
+  width: 100%;
+}
+
+.resultado-item h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-left: 20px; /* Adicione margem à esquerda */
+  margin-right: 20px; /* Adicione margem à direita */
+  color: rgb(4, 151, 28); /* Defina a cor das letras como verde */
+}
+
+.resultado-item p {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.container {
+  text-align: left;
+  margin-top: 100px;
+  margin-left: 300px; /* Adicione margem à esquerda */
+  margin-right: 300px; /* Adicione margem à direita */
+}
+
+table {
+  margin: 0 auto;
+  text-align: left;
+}
+table th, table td {
+  padding: 5px 10px;
+}
+
+.centralizado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Estilos para a seção "Contatos" */
+#contatos {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+}
+
+#contatos h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contatos p {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* Estilos para centralizar o formulário */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 20px; /* Defina o tamanho da fonte */
+}
+
+#contact-form input[type="submit"] {
+  width: auto;
+}
+
+/* Estilos para o footer */
+footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: right;
+  color: white;
+}
+
+/* Estilos para o texto de direitos autorais */
+footer p {
+  margin: auto;
+  padding: auto;
+}
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centralize o conteúdo verticalmente */
+  text-align: center;
+  height: 100vh; /* Defina a altura para 100% da altura da viewport para centralização vertical */
+}
+
+.calculadora img {
+  max-width: 100%;
+  height: auto; /* Mantém a proporção original da imagem */
+}
+

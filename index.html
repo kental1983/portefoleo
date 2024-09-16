@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Quental</title>
+    <script src="display.js"></script>
+    <style>
+        /* Estilos para a imagem responsiva em dispositivos móveis */
+#imagem-responsiva {
+    max-width: 100%; /* Ajusta a largura máxima da imagem para 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove margens indesejadas */
+    margin: 0 auto; /* Centraliza horizontalmente a imagem */
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="topbar">
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+        </ul>
+    </nav>
+    
+    <div id="splash-screen" style="background-image: url('terry-vlisidis-WsEbnsnKbUE-unsplash.jpg'); background-size: cover; background-position: center; filter: brightness(0.5);">
+        <h1>Bem-vindo</h1>
+        <p>A Carregar...</p>
+    </div>
+    <header>
+        <h1>João Quental</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+        </ul>
+    </nav>    
+    <section id="sobre" class="sobre">
+        <img src="imagens/FB_IMG_1467234282183-Photoroom.jpg" alt="Minha Foto de Perfil" class="perfil-image">
+        <h2>Sobre Mim</h2>
+        <p>Olá, sou João Miguel de Bastos Quental, um apaixonado por tecnologia e desenvolvimento web. Possuo competências em SQL, HTML, PHP, Javascript, alguma experiência em C#, entre outras. Esta paixão pela tecnologia conduziu-me à exploração da criação de soluções web envolventes e funcionais.</p>
+
+        <p>Além do meu trabalho na área da tecnologia, sou entusiasta da fotografia e da inovação. Sempre me fascinou a fotografia, capturando momentos especiais e explorando a criatividade através da lente. A tecnologia, especialmente o código aberto, tem estado sempre no meu radar, e continuo a acompanhar as últimas tendências e avanços.</p>
+
+        <p>No passado, tive o prazer de praticar várias modalidades desportivas, incluindo BTT e natação, como amador. O automobilismo também faz parte das minhas paixões, onde acompanho de perto as corridas e a evolução das tecnologias automotivas.</p>
+
+        <p>Tenho uma paixão por aprender e melhorar as minhas habilidades constantemente. Acredito que a tecnologia é uma ferramenta poderosa que pode moldar o mundo e torná-lo um lugar melhor. Estou sempre disposto a explorar novos desafios e oportunidades de desenvolvimento.</p>
+
+        <p>Se estiver interessado em discutir projetos emocionantes relacionados com o desenvolvimento web ou partilhar experiências em tecnologia, não hesite em contactar-me. Vamos colaborar e criar algo incrível juntos!</p>
+    </section>
+    
+    <section id="projetos" class="centralizado">
+        <h2>Projetos</h2>
+        <div id="projetos-list">
+            <!-- Outros projetos aqui -->
+            
+            <!-- Espaço para a Calculadora de IPv4 -->
+            <div id="calculadora-apresentacao">
+                <p>Calculadora de IPv4</p>
+                <p>A Calculadora de IP é uma ferramenta poderosa desenvolvida em PHP para auxiliar na gestão de redes IP. Ela permite calcular informações essenciais, como endereço de rede, intervalo de IPs, máscara de sub-rede e muito mais. Basta inserir o endereço IP e o número de bits da sub-rede para obter resultados precisos e facilitar a configuração da sua rede.</p>
+                <!-- Adicione um link ou botão para a página calculadora.php -->
+                <a href="calculadora.php" class="button">
+                    <div>
+                        <img id="imagem-responsiva" src="mascara-de-sub-rede-768x457.jpg" alt="Ícone da Calculadora">
+                    </div>
+                    
+                </a>                
+            </div>
+        </div>
+    </section>
+    
+    <section id="contatos">
+        <h2>Contatos</h2>
+        <a href="mailto:kental@hotmail.com">kental1983@hotmail</a>
+        <p>TLM: +351917342404</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 João Quental</p>
+        <p>Foto de <a href="https://unsplash.com/pt-br/@vlisidis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Terry Vlisidis</a> na <a href="https://unsplash.com/pt-br/fotografias/WsEbnsnKbUE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        <p>Foto de <a href="https://unsplash.com/pt-br/@arnaudpapa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Arnaud Papa</a> na <a href="https://unsplash.com/pt-br/fotografias/nuW1WqqDzsU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('.menu a');
+            
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+    <!-- Inclua o arquivo JavaScript time.js -->
+    <script src="time.js"></script>
+    <script src="scroolbar.js"></script>
+    <script src="scrollbutton.js"></script>
+</body>
+</html>
+
+
+
+
+
+
