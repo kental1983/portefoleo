@@ -1,90 +1,18 @@
-/* Estilos para telas pequenas (max-width: 768px) */
-@media screen and (max-width: 768px) {
-  .sidebar {
-    width: 100%; /* Ajuste a largura da barra lateral para ocupar a largura da tela */
-  }
-  .content {
-    margin-left: 0; /* Não use margem à esquerda no conteúdo principal */
-  }
-}
-
-.topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color */
-  color: #fff; /* Adjust the text color */
-  text-align: center; /* Center the text horizontally */
-  padding: 10px 0; /* Reduce the top and bottom padding */
-}
-
-.topbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center; /* Center the list items horizontally */
-  padding: 0;
-}
-
-.topbar a {
-  text-decoration: none;
-  color: rgb(4, 151, 28);
-  font-weight: bold;
-  padding: 10px 20px; /* Reduce the left and right padding */
-  font-family: 'Roboto Mono', monospace;
-}
-
-
-/* Estilos para a tela de apresentação (splash) */
-#splash-screen {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #333;
-  color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-}
-
-/* Estilização para a apresentação da Calculadora de IPv4 */
-#calculadora-apresentacao {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 20px;
-  padding: 20px;
-  text-align: left;
-  color: rgb(4, 151, 28);
-  margin-top: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin-left: 300px;
-  margin-right: 300px;
-}
-
-/* Estilização para esconder a tela de apresentação após o carregamento */
-#content {
-  display: none;
-}
-
 /* Estilos gerais */
 body {
-  margin: 10;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
   margin: 0;
   padding: 0;
-  background-image: url('arnaud-papa-nuW1WqqDzsU-unsplash.jpg');
+  font-family: 'Roboto Mono', monospace;
+  background-image: url('imagens/arnaud-papa-nuW1WqqDzsU-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: rgb(4, 151, 28);
   font-size: 18px;
   animation: scrollBackground 5s linear infinite;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @keyframes scrollBackground {
@@ -96,336 +24,493 @@ body {
   }
 }
 
-
 header {
-  background-image: url('arnaud-papa-nuW1WqqDzsU-unsplash.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(4, 151, 28);
   text-align: center;
-  padding: 20px 0;
-  font-family: cursive;
-  color: rgb(6, 64, 181);
+  padding: 10px;
   position: relative;
+  top: 0;
   z-index: 999;
+}
+
+.topbar {
+  display: flex;
+  justify-content: center; /* Centraliza a topbar inteira */
+  align-items: center;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Adiciona largura total para garantir centralização */
+  z-index: 999;
+}
+
+.topbar .menu-btn {
+  display: none; /* Botão escondido por padrão */
   font-size: 24px;
-  margin-bottom: 20px; /* Adicione esta linha para ajustar o espaçamento entre o header e o conteúdo abaixo */
-}
-
-
-main {
-  margin: 20px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   text-align: center;
+  color: rgb(11, 215, 230);
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-/* Estilos para os itens da lista (li) */
-li {
-  display: inline;
-  margin-block-start: 40px;
+.topbar nav {
+  display: flex;
+  justify-content: center; /* Mantém centralizado */
+  align-items: center;
 }
 
-/* Estilos para os links (a) dentro dos itens da lista */
-li a {
+.topbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.topbar ul li {
+  margin: 0;
+}
+
+.topbar ul li a {
+  color: rgb(11, 215, 230);
   text-decoration: none;
-  color: #043cab;
   font-weight: bold;
-  font-size: 1.2rem;
+  padding: 10px 20px;
+  text-align: center; /* Centraliza o texto dentro do link */
+  display: block; /* Faz o link ocupar todo o espaço do li */
 }
 
 /* Estilos para seções */
 section {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
+  margin: 20px auto;
   padding: 20px;
-}
-
-/* Estilos para cabeçalhos de seção */
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: rgb(4, 151, 28);
-}
-
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 150px; /* Largura da barra lateral */
-  height: 100%;
   background-color: transparent;
-  border-radius: 5px;
-  font-family: 'Roboto Mono', monospace; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
-  font-size: 20px; /* Aumentar o tamanho das letras para a seção "Projetos" */
-  color: rgb(4, 151, 28);
-  padding: 20px;
+  max-width: 800px;  /* Limita a largura máxima */
+  text-align: center;
+  flex-grow: 1; /* O conteúdo principal se ajusta e ocupa o espaço restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 60px; /* Espaço abaixo da topbar */
+  padding-bottom: 60px; /* Espaço acima do footer */
+  box-sizing: border-box; /* Garante que padding seja incluído no tamanho total */
 }
 
-.sidebar h3 {
-  margin-top: 0;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin-bottom: 10px;
-}
-
-.sidebar a {
-  text-decoration: none;
-  font-family: 'Roboto Mono', monospace; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
-  font-size: 20px; /* Aumentar o tamanho das letras para a seção "Projetos" */
-  color: rgb(4, 151, 28);
-}
-
-/* Estilos para o conteúdo principal */
-.content {
-  margin-left: 220px; /* Largura da barra lateral + margem */
-  padding: 20px;
-}
-
-/* Estilos para a seção "Sobre" */
-#sobre {
-  margin: auto;
-  padding: auto;
-  background-color: transparent;
-  border-radius: 5px;
-  padding: 20px;
-  text-align: left;
-  color: rgb(4, 151, 28);
-  font-family: 'Roboto Mono', monospace;
-  font-size: 20px;
-}
-
-#sobre img {
-  max-width: 200px;
-  float: right;
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-
-#sobre h2 {
+.sobre h2, .projetos h2, .cv h2, .contatos h2 {
   text-align: center;
   color: rgb(4, 151, 28);
   font-size: 1.8rem;
 }
 
-#sobre p {
-  text-align: left;
-  color: rgb(4, 151, 28);
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 300px;
-  margin-right: 300px;
-}
-
-#sobre .perfil-image {
-  float: left;
-  margin-right: 20px; /* Ajuste conforme necessário */
+.sobre p, .projetos p, .cv p, .contatos p {
+  margin: 10px 0;
+  text-align: center;
 }
 
 .perfil-image {
-  max-width: 200px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  float: left; /* Adicione esta linha para alinhar a imagem à esquerda */
-  margin-right: 20px; /* Adicione um espaçamento à direita para separar a imagem do texto */
-  margin-bottom: 10px;
-}
-/* Estilos para a seção "Projetos" */
-#projetos {
+    max-width: 200px;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
 
-  margin: auto;
-  padding: auto;
-  background-color: transparent;
-  font-family: 'Roboto Mono', sans-serif; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
-  font-size: 20px; /* Aumentar o tamanho das letras para a seção "Projetos" */
-  text-align: left; /* Alinhe o texto à esquerda */
-  margin-left: 30px; /* Adicione margem à esquerda */
-  margin-right: 30px; /* Adicione margem à direita */
-  color: rgb(4, 151, 28);
-}
-
-/* Estilos para projetos dentro da seção "Projetos" */
-/* Estilos para projetos */
-.projeto {
-  background-image: url('StockSnap_D91B1NOVLJ.jpg'); /* Manter a imagem de fundo */
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  font-family: 'Roboto Mono', sans-serif; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
-  font-size: 20px; /* Aumentar o tamanho das letras para a seção "Projetos" */
-  color: rgb(4, 151, 28); /* Defina a cor do texto como verde */
-}
-
-/* Estilos para o título do projeto */
-.projeto h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  color: rgb(4, 151, 28); /* Defina a cor das letras como verde */
-}
-
-/* Estilos para o texto do projeto */
-.projeto p {
-  color: rgb(4, 151, 28); /* Defina a cor das letras como verde */
-}
-
-.projeto img {
+.sobre img, .projetos img, .cv img, .contatos img {
   max-width: 100%;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.projetos img {
   margin-bottom: 10px;
 }
 
-#resultado {
-  background-image: url('StockSnap_D91B1NOVLJ.jpg'); /* Manter a imagem de fundo */
-  border: 1px solid #ddd;
-  padding: 20px;
+.cv img {
+  max-width: 500px;
+}
+
+.contatos h2 {
+  margin-bottom: 40px;
+}
+
+.contatos p {
   margin-bottom: 20px;
-  border-radius: 5px;
-  font-family: 'Roboto Mono', sans-serif; /* Substitua 'Nome da Fonte' pelo nome da fonte desejada */
-  font-size: 20px; /* Aumentar o tamanho das letras para a seção "Projetos" */
-  color: rgb(4, 151, 28); /* Defina a cor do texto como verde */
 }
 
-/* Estilos para a apresentação dos resultados da calculadora */
-.resultado-item {
-  background-image: url('StockSnap_D91B1NOVLJ.jpg');
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  font-family: 'Roboto Mono', sans-serif;
-  font-size: 20px;
-  text-align: left;
-  /* Remova as margens e a sombra */
-  margin: 0; /* Remova margens */
-  box-shadow: none; /* Remova a sombra */
-  /* Ajuste a largura para preencher a tela */
-  width: 100%;
-}
-
-.resultado-item h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  color: rgb(4, 151, 28); /* Defina a cor das letras como verde */
-}
-
-.resultado-item p {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.container {
-  text-align: left;
-  margin-top: 100px;
-  margin-left: 300px; /* Adicione margem à esquerda */
-  margin-right: 300px; /* Adicione margem à direita */
-}
-
-table {
-  margin: 0 auto;
-  text-align: left;
-}
-table th, table td {
-  padding: 5px 10px;
-}
-
-.centralizado {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* Estilos para a seção "Contatos" */
-#contatos {
-  background-color: #333;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  color: white;
-}
-
-#contatos h2 {
-  font-size: 1.8rem;
-  color: white;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-#contatos p {
-  font-size: 1.2rem;
-  margin: 0;
-  text-align: center;
-}
-
-/* Estilos para centralizar o formulário */
-#contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#contact-form label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-#contact-form input,
-#contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-#contact-form input[type="submit"] {
-  width: auto;
-}
-
-/* Estilos para o footer */
+/* Estilos do footer */
 footer {
-  background-color: #333;
-  padding: 10px;
-  text-align: right;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
+  padding: 0.3em; /* Ajuste conforme necessário */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex; /* Ativa flexbox */
+  justify-content: space-between; /* Espaçamento entre os itens */
+  align-items: center; /* Alinha verticalmente no centro */
 }
 
-/* Estilos para o texto de direitos autorais */
-footer p {
-  margin: auto;
-  padding: auto;
+.social-icons {
+  display: flex; /* Ativa flexbox */
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  align-items: center; /* Alinha verticalmente no centro */
+  gap: 10px; /* Espaçamento entre os ícones */
+  flex-grow: 1; /* Faz os ícones crescerem para ocupar o espaço disponível */
 }
 
-.calculadora {
+.social-icons img {
+  max-width: 30px; /* Define o tamanho máximo dos ícones */
+  height: auto; /* Mantém a proporção do ícone */
+}
+
+.creditos {
+  font-size: 12px; /* Tamanho menor para os créditos */
+  color: rgba(255, 255, 255, 0.6); /* Cor mais suave */
+  text-align: right; /* Alinha o texto à direita */
+}
+
+
+/* Estilos para telas grandes */
+@media screen and (min-width: 769px) {
+ @media screen and (max-width: 768px) {
+  .topbar nav {
+    display: none; /* Esconde o menu padrão em telas pequenas */
+  }
+
+  .topbar .menu-btn {
+    display: block; /* Mostra o botão de menu */
+  }
+
+  .topbar ul {
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    z-index: 999;
+  }
+
+  .topbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .topbar ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  .topbar ul.active {
+    display: flex; /* Mostra o menu ao clicar */
+  }
+}
+
+  section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #sobre img, .perfil-image {
+    float: left;
+    display: block;
+    margin-right: 20px;
+  }
+
+  #projetos img {
+    margin-bottom: 0;
+  }
+
+  footer {
+    position: fixed; /* Desloca o footer para baixo */
+  }
+
+  footer.creditos {
+    margin-right: 0; /* Espaço do lado direito é zero */
+  }
+  footer.creditos a {
+    margin-right: 10px;
+  }
+
+  footer.social-icons {
+    text-align: center;
+  }
+
+  footer.social-icons img {
+    max-width: 20px;
+  }
+
+  footer.social-icons a {
+    margin-right: 0;
+  }
+  
+  footer.social-icons a:hover {
+    filter: brightness(1.2);
+  }
+}
+
+/* Estilos para a tela de apresentação (splash) */
+#splash-screen {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center; /* Vertically center content */
-  text-align: center;
-  height: 100vh; /* Set the height to 100% of the viewport height for vertical centering */
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('terry-vlisidis-WsEbnsnKbUE-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  z-index: 10000; /* Certifica-se que o splash-screen esteja acima de tudo */
+  color: #fff; /* O texto será branco para maior visibilidade */
+}
+
+#splash-screen h1, #splash-screen p {
+  margin: 0;
+}
+
+
+/* Estilos para telas médias */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .splash-screen {
+    background-size: contain;
+  }
+
+  #splash-screen h1 {
+    font-size: 2rem;
+  }
+
+  #splash-screen p {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+  .topbar nav {
+    display: none; /* Esconde o menu padrão em telas pequenas */
+  }
+
+  .topbar .menu-btn {
+    display: block; /* Mostra o botão de menu */
+  }
+
+  .topbar ul {
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    z-index: 999;
+  }
+
+  .topbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .topbar ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  .topbar ul.active {
+    display: flex; /* Mostra o menu ao clicar */
+  }
+}
+
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #sobre img, .perfil-image {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
+    font-size: 1.5rem;
+  }
+
+  #sobre p, .projetos p, .cv p, .contatos p {
+    font-size: 1rem;
+  }
+
+  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
+    margin-bottom: 20px;
+  }
+
+  #sobre p, .projetos p, .cv p, .contatos p {
+    margin-bottom: 10px;
+  }
+
+  #sobre img, .perfil-image {
+    margin-bottom: 10px;
+  }
+
+  #projetos img {
+    margin-bottom: 10px;
+  }
+
+  #cv img {
+    max-width: 400px;
+  }
+
+  #contatos h2 {
+    margin-bottom: 40px;
+  }
+
+  #contatos p {
+    margin-bottom: 20px;
+  }
+
+  #contatos img {
+    max-width: 300px;
+  }
+
+  #contatos a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #contatos a:hover {
+    color: #007bff;
+  }
+
+  #contatos img {
+    margin-bottom: 10px;
+  }
+
+  #contatos a {
+    display: block;
+    margin-bottom: 10px;
+  } 
+}
+
+/* Estilos para telas pequenas */
+@media screen and (max-width: 480px) {
+  .splash-screen {
+    background-size: contain;
+  }
+
+  #splash-screen h1 {
+    font-size: 2rem;
+  }
+
+  #splash-screen p {
+    font-size: 1.2rem;
+  }
+  @media screen and (max-width: 768px) {
+  .topbar nav {
+    display: flex; /* Esconde o menu padrão em telas pequenas */
+  }
+
+  .topbar .menu-btn {
+    display: block; /* Mostra o botão de menu */
+  }
+
+  .topbar ul {
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    z-index: 999;
+  }
+
+  .topbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .topbar ul li a {
+    display: block;
+    width: 100%;
+  }
+
+  .topbar ul.active {
+    display: flex; /* Mostra o menu ao clicar */
+  }
+}
+
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #sobre img, .perfil-image {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
+    font-size: 1.5rem;
+  }
+
+  #sobre p, .projetos p, .cv p, .contatos p {
+    font-size: 1rem;
+  }
+
+  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
+    margin-bottom: 20px;
+  }
+
+  #sobre p, .projetos p, .cv p, .contatos p {
+    margin-bottom: 10px;
+  }
+
+  #sobre img, .perfil-image {
+    margin-bottom: 10px;
+  }
+
+  #contatos h2 {
+    margin-bottom: 30px;
+  }
+
+  #contatos p {
+    margin-bottom: 10px;
+  }
+
+  #contatos h2, #contatos p {
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 0.2em; /* Reduz o padding para diminuir o tamanho do footer */
+  }
+
+  footer.creditos {
+    font-size: 10px; /* Tamanho menor para os créditos */
+  }
+
+  footer.social-icons a {
+    margin-right: 5px;
+  }
+
+  footer.social-icons img {
+    max-width: 20px;
+    height: auto;
+  }
 }
 
 
 
 
-  
 

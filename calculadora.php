@@ -171,13 +171,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="display.js"></script>
     <title>Calculatora De IPv4</title>
-    
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <nav class="topbar">
     <ul>
+        <li><a href="index.html#home">Inicio</a></li>
         <li><a href="index.html#sobre">Sobre</a></li>
         <li><a href="index.html#projetos">Projetos</a></li>
         <li><a href="index.html#contatos">Contatos</a></li>
@@ -185,7 +185,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </nav>
 
 
-    <div id="splash-screen" style="background-image: url('terry-vlisidis-WsEbnsnKbUE-unsplash.jpg'); background-size: cover; background-position: center; filter: brightness(0.5);">
+    <div id="splash-screen" style="background-image: url('imagens/terry-vlisidis-WsEbnsnKbUE-unsplash.jpg'); background-size: cover; background-position: center; filter: brightness(0.5);">
         <h1>Calculadora de ip</h1>
         <p>A Carregar...</p>
     </div>
@@ -225,7 +225,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <script src="time.js"></script>
     <script src="scroolbar.js"></script>
-
 </body>
 </html>
 

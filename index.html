@@ -6,44 +6,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Quental</title>
-    <script src="display.js"></script>
-    <style>
-        /* Estilos para a imagem responsiva em dispositivos móveis */
-#imagem-responsiva {
-    max-width: 100%; /* Ajusta a largura máxima da imagem para 100% da largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove margens indesejadas */
-    margin: 0 auto; /* Centraliza horizontalmente a imagem */
-}
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <nav class="topbar">
-        <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contatos">Contatos</a></li>
-        </ul>
-    </nav>
-    
-    <div id="splash-screen" style="background-image: url('terry-vlisidis-WsEbnsnKbUE-unsplash.jpg'); background-size: cover; background-position: center; filter: brightness(0.5);">
+    <div id="splash-screen" style="background-image: url('imagens/terry-vlisidis-WsEbnsnKbUE-unsplash.jpg'); background-size: cover; background-position: center; filter: brightness(0.5);">
         <h1>Bem-vindo</h1>
         <p>A Carregar...</p>
     </div>
     <header>
-        <h1>João Quental</h1>
+        <nav class="topbar">
+            <button class="menu-btn">&#9776;</button>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#cv" class="nav-link">Currículo</a></li>
+                <li><a href="#contatos" class="nav-link">Contatos</a></li>
+            </ul>
+        </nav>    
     </header>
-    <nav>
+
+    <section id="home" class="section">
+        <h2>João Quental</h2>
         <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contatos">Contatos</a></li>
+            <li><a href="#"><img src="imagens/FB_IMG_1467234282183-Photoroom.jpg" alt="Minha Foto de Perfil" class="perfil-image"></a></li>
         </ul>
-    </nav>    
-    <section id="sobre" class="sobre">
-        <img src="imagens/FB_IMG_1467234282183-Photoroom.jpg" alt="Minha Foto de Perfil" class="perfil-image">
+    </section>
+    
+    <section id="sobre" class="section active">
         <h2>Sobre Mim</h2>
         <p>Olá, sou João Miguel de Bastos Quental, um apaixonado por tecnologia e desenvolvimento web. Possuo competências em SQL, HTML, PHP, Javascript, alguma experiência em C#, entre outras. Esta paixão pela tecnologia conduziu-me à exploração da criação de soluções web envolventes e funcionais.</p>
 
@@ -56,7 +47,7 @@
         <p>Se estiver interessado em discutir projetos emocionantes relacionados com o desenvolvimento web ou partilhar experiências em tecnologia, não hesite em contactar-me. Vamos colaborar e criar algo incrível juntos!</p>
     </section>
     
-    <section id="projetos" class="centralizado">
+    <section id="projetos" class="section hidden">
         <h2>Projetos</h2>
         <div id="projetos-list">
             <!-- Outros projetos aqui -->
@@ -68,24 +59,37 @@
                 <!-- Adicione um link ou botão para a página calculadora.php -->
                 <a href="calculadora.php" class="button">
                     <div>
-                        <img id="imagem-responsiva" src="mascara-de-sub-rede-768x457.jpg" alt="Ícone da Calculadora">
+                        <img src="imagens/mascara-de-sub-rede-768x457.jpg" alt="Ícone da Calculadora" class="perfil-image">
                     </div>
-                    
                 </a>                
             </div>
         </div>
     </section>
+
+    <section id="cv" class="section hidden">
+        <h2>Currículo</h2>
+        <p>Currículo vitae disponível no link abaixo para visualização ou para download:</p>
+        <a href="pdf/João_Quental.pdf" target="_blank">Currículo</a>
+    </section>
     
-    <section id="contatos">
+    <section id="contatos" class="section hidden">
         <h2>Contatos</h2>
-        <a href="mailto:kental@hotmail.com">kental1983@hotmail</a>
+        <a href="kental@hotmail.com" class="social-icons"><img src="imagens/email (1).png" alr="e-mail">kental1983@hotmail.com</a>
         <p>TLM: +351917342404</p>
+        <a href="https://wa.me/+35191734040" class="social-icons"><img src="imagens/phone-message.png" alt="whatapp"><p>TLM: +351917342404</p></a>
     </section>
     
     <footer>
-        <p>&copy; 2023 João Quental</p>
+        <div class="social-icons">
+            <a href="#"><p>&copy; 2023 João Quental</p></a>
+            <a href="https://wa.me/+35191734040"><img src="imagens/phone-message.png" alt="whatapp"></a>
+            <a href="https://replit.com/@JoaoQuental1"><img src="imagens/icons8-replit-48.png" alt="Replit"></a>
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-quental-8b70b438/"><img src="imagens/linkedin.png" alt="linkedin"></a>
+        </div>
+        <div class="creditos">
         <p>Foto de <a href="https://unsplash.com/pt-br/@vlisidis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Terry Vlisidis</a> na <a href="https://unsplash.com/pt-br/fotografias/WsEbnsnKbUE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
         <p>Foto de <a href="https://unsplash.com/pt-br/@arnaudpapa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Arnaud Papa</a> na <a href="https://unsplash.com/pt-br/fotografias/nuW1WqqDzsU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -103,9 +107,10 @@
         });
     </script>
     <!-- Inclua o arquivo JavaScript time.js -->
-    <script src="time.js"></script>
-    <script src="scroolbar.js"></script>
-    <script src="scrollbutton.js"></script>
+    <script src="script/time.js"></script>
+    <script src="script/scroolbar.js"></script>
+    <script src="script/scrollbutton.js"></script>
+    <script src="script/menu.js"></script>
 </body>
 </html>
 
