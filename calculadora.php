@@ -223,8 +223,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ?>
         </div>
     </div>
-    <script src="time.js"></script>
-    <script src="scroolbar.js"></script>
+    <script src="scrip/time.js"></script>
+    <script src="scrip/scroolbar.js"></script>
 </body>
 </html>
 
