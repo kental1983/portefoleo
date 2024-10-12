@@ -1,4 +1,3 @@
-/* Estilos gerais */
 body {
   margin: 0;
   padding: 0;
@@ -175,10 +174,7 @@ footer {
 
 /* Estilos para telas grandes */
 @media screen and (min-width: 769px) {
-  /* Mantém as regras originais para telas grandes */
-}
-
-@media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) {
   .topbar nav {
     display: none; /* Esconde o menu padrão em telas pequenas */
   }
@@ -214,48 +210,47 @@ footer {
   }
 }
 
-section {
-  padding-left: 30px;
-  padding-right: 30px;
-}
+  section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
-#sobre img, .perfil-image {
-  float: left;
-  display: block;
-  margin-right: 20px;
-}
+  #sobre img, .perfil-image {
+    float: left;
+    display: block;
+    margin-right: 20px;
+  }
 
-#projetos img {
-  margin-bottom: 0;
-}
+  #projetos img {
+    margin-bottom: 0;
+  }
 
-footer {
-  position: fixed; /* Desloca o footer para baixo */
-}
+  footer {
+    position: fixed; /* Desloca o footer para baixo */
+  }
 
-footer.creditos {
-  margin-right: 0; /* Espaço do lado direito é zero */
-}
+  footer.creditos {
+    margin-right: 0; /* Espaço do lado direito é zero */
+  }
+  footer.creditos a {
+    margin-right: 10px;
+  }
 
-footer.creditos a {
-  margin-right: 10px;
-}
+  footer.social-icons {
+    text-align: center;
+  }
 
-footer.social-icons {
-  text-align: center;
-}
+  footer.social-icons img {
+    max-width: 20px;
+  }
 
-footer.social-icons img {
-  max-width: 20px; /* Define o tamanho máximo dos ícones */
-  height: auto; /* Mantém a proporção */
-}
-
-footer.social-icons a {
-  margin-right: 0;
-}
-
-footer.social-icons a:hover {
-  filter: brightness(1.2);
+  footer.social-icons a {
+    margin-right: 0;
+  }
+  
+  footer.social-icons a:hover {
+    filter: brightness(1.2);
+  }
 }
 
 /* Estilos para a tela de apresentação (splash) */
@@ -283,6 +278,7 @@ footer.social-icons a:hover {
   margin: 0;
 }
 
+
 /* Estilos para telas médias */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .splash-screen {
@@ -296,9 +292,8 @@ footer.social-icons a:hover {
   #splash-screen p {
     font-size: 1.2rem;
   }
-}
 
-@media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
   .topbar nav {
     display: none; /* Esconde o menu padrão em telas pequenas */
   }
@@ -334,73 +329,74 @@ footer.social-icons a:hover {
   }
 }
 
-section {
-  padding-left: 20px;
-  padding-right: 20px;
-}
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-#sobre img, .perfil-image {
-  float: none;
-  display: block;
-  margin: 0 auto;
-}
+  #sobre img, .perfil-image {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
 
-#sobre h2, .projetos h2, .cv h2, .contatos h2 {
-  font-size: 1.5rem;
-}
+  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
+    font-size: 1.5rem;
+  }
 
-#sobre p, .projetos p, .cv p, .contatos p {
-  font-size: 1rem;
-}
+  #sobre p, .projetos p, .cv p, .contatos p {
+    font-size: 1rem;
+  }
 
-#sobre h2, .projetos h2, .cv h2, .contatos h2 {
-  margin-bottom: 20px;
-}
+  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
+    margin-bottom: 20px;
+  }
 
-#sobre p, .projetos p, .cv p, .contatos p {
-  margin-bottom: 10px;
-}
+  #sobre p, .projetos p, .cv p, .contatos p {
+    margin-bottom: 10px;
+  }
 
-#sobre img, .perfil-image {
-  margin-bottom: 10px;
-}
+  #sobre img, .perfil-image {
+    margin-bottom: 10px;
+  }
 
-#projetos img {
-  margin-bottom: 10px;
-}
+  #projetos img {
+    margin-bottom: 10px;
+  }
 
-#cv img {
-  max-width: 400px;
-}
+  #cv img {
+    max-width: 400px;
+  }
 
-#contatos h2 {
-  margin-bottom: 40px;
-}
+  #contatos h2 {
+    margin-bottom: 40px;
+  }
 
-#contatos p {
-  margin-bottom: 20px;
-}
+  #contatos p {
+    margin-bottom: 20px;
+  }
 
-#contatos img {
-  max-width: 300px;
-}
+  #contatos img {
+    max-width: 300px;
+  }
 
-#contatos a {
-  display: block;
-  margin-bottom: 10px;
-}
+  #contatos a {
+    display: block;
+    margin-bottom: 10px;
+  }
 
-#contatos a:hover {
-  color: #007bff;
-}
+  #contatos a:hover {
+    color: #007bff;
+  }
 
-#contatos img {
-  margin-bottom: 10px;
-}
+  #contatos img {
+    margin-bottom: 10px;
+  }
 
-#contatos a {
-  display: block;
-  margin-bottom: 10px;
+  #contatos a {
+    display: block;
+    margin-bottom: 10px;
+  } 
 }
 
 /* Estilos para telas pequenas */
@@ -416,9 +412,9 @@ section {
   #splash-screen p {
     font-size: 1.2rem;
   }
-
+  @media screen and (max-width: 768px) {
   .topbar nav {
-    display: flex; /* Exibe o menu padrão em telas pequenas */
+    display: flex; /* Esconde o menu padrão em telas pequenas */
   }
 
   .topbar .menu-btn {
@@ -452,66 +448,66 @@ section {
   }
 }
 
-section {
-  padding-left: 20px;
-  padding-right: 20px;
-}
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-#sobre img, .perfil-image {
-  float: none;
-  display: block;
-  margin: 0 auto;
-}
+  #sobre img, .perfil-image {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
 
-#sobre h2, .projetos h2, .cv h2, .contatos h2 {
-  font-size: 1.5rem;
-}
+  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
+    font-size: 1.5rem;
+  }
 
-#sobre p, .projetos p, .cv p, .contatos p {
-  font-size: 1rem;
-}
+  #sobre p, .projetos p, .cv p, .contatos p {
+    font-size: 1rem;
+  }
 
-#sobre h2, .projetos h2, .cv h2, .contatos h2 {
-  margin-bottom: 20px;
-}
+  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
+    margin-bottom: 20px;
+  }
 
-#sobre p, .projetos p, .cv p, .contatos p {
-  margin-bottom: 10px;
-}
+  #sobre p, .projetos p, .cv p, .contatos p {
+    margin-bottom: 10px;
+  }
 
-#sobre img, .perfil-image {
-  margin-bottom: 10px;
-}
+  #sobre img, .perfil-image {
+    margin-bottom: 10px;
+  }
 
-#contatos h2 {
-  margin-bottom: 30px;
-}
+  #contatos h2 {
+    margin-bottom: 30px;
+  }
 
-#contatos p {
-  margin-bottom: 10px;
-}
+  #contatos p {
+    margin-bottom: 10px;
+  }
 
-#contatos h2, #contatos p {
-  font-size: 1rem;
-}
+  #contatos h2, #contatos p {
+    font-size: 1rem;
+  }
 
-footer {
-  padding: 0.2em; /* Reduz o padding para diminuir o tamanho do footer */
-}
+  footer {
+    padding: 0.2em; /* Reduz o padding para diminuir o tamanho do footer */
+  }
 
-footer.creditos {
-  font-size: 10px; /* Tamanho menor para os créditos */
-}
+  footer.creditos {
+    font-size: 10px; /* Tamanho menor para os créditos */
+  }
 
-footer.social-icons a {
-  margin-right: 5px;
-}
+  footer.social-icons a {
+    margin-right: 5px;
+  }
 
-footer.social-icons img {
-  max-width: 20px; /* Mantém o tamanho dos ícones em telas pequenas */
-  height: auto; /* Mantém a proporção */
+  footer.social-icons img {
+    max-width: 20px;
+    height: auto;
+  }
 }
-
 
 
 
