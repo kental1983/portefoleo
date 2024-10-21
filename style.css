@@ -1,3 +1,4 @@
+/* Estilos gerais */
 body {
   margin: 0;
   padding: 0;
@@ -114,7 +115,7 @@ section {
     float: right;
     margin-right: 20px;
     margin-bottom: 10px;
-  }
+}
 
 .sobre img, .projetos img, .cv img, .contatos img {
   max-width: 100%;
@@ -171,45 +172,8 @@ footer {
   text-align: right; /* Alinha o texto à direita */
 }
 
-
 /* Estilos para telas grandes */
 @media screen and (min-width: 769px) {
- @media screen and (max-width: 768px) {
-  .topbar nav {
-    display: none; /* Esconde o menu padrão em telas pequenas */
-  }
-
-  .topbar .menu-btn {
-    display: block; /* Mostra o botão de menu */
-  }
-
-  .topbar ul {
-    flex-direction: column;
-    gap: 5px;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: none;
-    z-index: 999;
-  }
-
-  .topbar ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .topbar ul li a {
-    display: block;
-    width: 100%;
-  }
-
-  .topbar ul.active {
-    display: flex; /* Mostra o menu ao clicar */
-  }
-}
-
   section {
     padding-left: 30px;
     padding-right: 30px;
@@ -232,6 +196,7 @@ footer {
   footer.creditos {
     margin-right: 0; /* Espaço do lado direito é zero */
   }
+  
   footer.creditos a {
     margin-right: 10px;
   }
@@ -278,8 +243,7 @@ footer {
   margin: 0;
 }
 
-
-/* Estilos para telas médias */
+/* Ajuste para telas médias (tablets e smartphones em landscape) */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .splash-screen {
     background-size: contain;
@@ -293,113 +257,56 @@ footer {
     font-size: 1.2rem;
   }
 
-  @media screen and (max-width: 768px) {
-  .topbar nav {
-    display: none; /* Esconde o menu padrão em telas pequenas */
+  footer {
+    position: static;
   }
 
-  .topbar .menu-btn {
-    display: block; /* Mostra o botão de menu */
+  footer.creditos {
+    margin-right: 0;
+  }
+
+  footer.social-icons {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centraliza os ícones sociais */
+  }
+
+  footer.social-icons img {
+    max-width: 20px; /* Ajuste do tamanho dos ícones para telas médias */
+    height: auto; /* Mantém a proporção dos ícones */
+    margin: 0 5px; /* Espaçamento horizontal entre ícones */
+  }
+
+  footer.social-icons a {
+    margin-right: 0; /* Remove margem direita para os links */
+  }
+}
+
+/* Ajuste específico para o iPhone X (portrait e landscape) */
+@media only screen and (device-width: 375px) and (device-height: 812px) {
+  footer.social-icons img {
+    max-width: 20px; /* Tamanho adequado dos ícones no iPhone X */
+    height: auto;
+  }
+
+  footer {
+    padding: 0.5em;
   }
 
   .topbar ul {
-    flex-direction: column;
-    gap: 5px;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: none;
-    z-index: 999;
+    display: none; /* Esconder o menu em telas pequenas por padrão */
   }
 
-  .topbar ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .topbar ul li a {
-    display: block;
-    width: 100%;
+  .topbar .menu-btn {
+    display: block; /* Mostrar botão de menu em dispositivos móveis */
   }
 
   .topbar ul.active {
-    display: flex; /* Mostra o menu ao clicar */
+    display: flex; /* Mostrar menu ao clicar no botão */
   }
 }
 
-  section {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  #sobre img, .perfil-image {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
-    font-size: 1.5rem;
-  }
-
-  #sobre p, .projetos p, .cv p, .contatos p {
-    font-size: 1rem;
-  }
-
-  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
-    margin-bottom: 20px;
-  }
-
-  #sobre p, .projetos p, .cv p, .contatos p {
-    margin-bottom: 10px;
-  }
-
-  #sobre img, .perfil-image {
-    margin-bottom: 10px;
-  }
-
-  #projetos img {
-    margin-bottom: 10px;
-  }
-
-  #cv img {
-    max-width: 400px;
-  }
-
-  #contatos h2 {
-    margin-bottom: 40px;
-  }
-
-  #contatos p {
-    margin-bottom: 20px;
-  }
-
-  #contatos img {
-    max-width: 300px;
-  }
-
-  #contatos a {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  #contatos a:hover {
-    color: #007bff;
-  }
-
-  #contatos img {
-    margin-bottom: 10px;
-  }
-
-  #contatos a {
-    display: block;
-    margin-bottom: 10px;
-  } 
-}
-
-/* Estilos para telas pequenas */
+/* Ajuste para telas pequenas (smartphones) */
 @media screen and (max-width: 480px) {
   .splash-screen {
     background-size: contain;
@@ -412,102 +319,45 @@ footer {
   #splash-screen p {
     font-size: 1.2rem;
   }
-  @media screen and (max-width: 768px) {
-  .topbar nav {
-    display: flex; /* Esconde o menu padrão em telas pequenas */
-  }
-
-  .topbar .menu-btn {
-    display: block; /* Mostra o botão de menu */
-  }
-
-  .topbar ul {
-    flex-direction: column;
-    gap: 5px;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: none;
-    z-index: 999;
-  }
-
-  .topbar ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .topbar ul li a {
-    display: block;
-    width: 100%;
-  }
-
-  .topbar ul.active {
-    display: flex; /* Mostra o menu ao clicar */
-  }
-}
-
-  section {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  #sobre img, .perfil-image {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
-    font-size: 1.5rem;
-  }
-
-  #sobre p, .projetos p, .cv p, .contatos p {
-    font-size: 1rem;
-  }
-
-  #sobre h2, .projetos h2, .cv h2, .contatos h2 {
-    margin-bottom: 20px;
-  }
-
-  #sobre p, .projetos p, .cv p, .contatos p {
-    margin-bottom: 10px;
-  }
-
-  #sobre img, .perfil-image {
-    margin-bottom: 10px;
-  }
-
-  #contatos h2 {
-    margin-bottom: 30px;
-  }
-
-  #contatos p {
-    margin-bottom: 10px;
-  }
-
-  #contatos h2, #contatos p {
-    font-size: 1rem;
-  }
 
   footer {
-    padding: 0.2em; /* Reduz o padding para diminuir o tamanho do footer */
+    position: static; /* O footer é estático em telas pequenas */
+    padding: 1em; /* Aumenta o padding no footer */
   }
 
   footer.creditos {
-    font-size: 10px; /* Tamanho menor para os créditos */
+    margin-right: 0;
   }
 
-  footer.social-icons a {
-    margin-right: 5px;
+  footer.social-icons {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centraliza os ícones sociais */
   }
 
   footer.social-icons img {
-    max-width: 20px;
-    height: auto;
+    max-width: 20px; /* Ajuste do tamanho dos ícones para telas pequenas */
+    height: auto; /* Mantém a proporção dos ícones */
+    margin: 0 5px; /* Espaçamento horizontal entre ícones */
+  }
+
+  footer.social-icons a {
+    margin-right: 0; /* Remove margem direita para os links */
+  }
+
+  .topbar .menu-btn {
+    display: block; /* Mostrar botão de menu em dispositivos móveis */
+  }
+
+  .topbar ul {
+    display: none; /* Esconder o menu em telas pequenas por padrão */
+  }
+
+  .topbar ul.active {
+    display: flex; /* Mostrar menu ao clicar no botão */
   }
 }
+
 
 
 
