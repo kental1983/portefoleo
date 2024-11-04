@@ -1,0 +1,166 @@
+
+
+/* Smartphones pequenos (até 375px de largura) */
+@media (max-width: 375px) {
+    body {
+        font-size: 14px;
+    }
+
+    .topbar ul {
+        flex-direction: column;
+        display: none; /* Menu escondido inicialmente */
+    }
+
+    .topbar .menu-btn {
+        display: block; /* Botão de menu visível */
+    }
+
+    .topbar ul.menu-ativo {
+        display: flex; /* Mostra o menu ao clicar */
+    }
+
+    header, footer {
+        padding: 8px;
+        text-align: center;
+    }
+
+    .perfil-image {
+        max-width: 120px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 10px;
+        max-width: 100%;
+    }
+}
+
+/* Smartphones médios (376px a 480px) */
+@media (min-width: 376px) and (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .topbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px 0;
+    }
+
+    .topbar ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .topbar ul.menu-ativo {
+        display: flex;
+    }
+
+    .perfil-image {
+        max-width: 150px;
+        margin: 0 auto 10px;
+    }
+
+    section {
+        padding: 15px;
+        max-width: 90%;
+    }
+}
+
+/* Smartphones grandes e tablets pequenos (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 17px;
+    }
+
+    .topbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .topbar ul {
+        flex-direction: row;
+        display: flex; /* Menu sempre visível nesta faixa */
+        gap: 10px;
+    }
+
+    .perfil-image {
+        max-width: 180px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 20px;
+        max-width: 85%;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Tablets em modo retrato (768px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    .topbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .topbar ul {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .perfil-image {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 25px;
+        max-width: 80%;
+    }
+
+    footer {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* Tablets em modo paisagem (até 1024px) */
+@media (max-width: 1024px) and (orientation: landscape) {
+    body {
+        font-size: 18px;
+    }
+
+    .topbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    .topbar ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .perfil-image {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 20px;
+        max-width: 75%;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
