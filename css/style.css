@@ -88,7 +88,7 @@ body {
     margin: 20px auto;
     padding: 20px;
     background-color: transparent;
-    max-width: 800px;  /* Limita a largura máxima */
+    max-width: 900px;  /* Limita a largura máxima */
     text-align: center;
     flex-grow: 1; /* O conteúdo principal se ajusta e ocupa o espaço restante */
     display: flex;
