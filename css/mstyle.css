@@ -1,96 +1,78 @@
 /* Estilos para telas grandes */
-@media screen and (min-width: 769px) {
-  .topbar nav {
-    display: none; /* Esconde o menu padrão em telas pequenas */
-  }
-
-  .topbar .menu-btn {
-    display: block; /* Mostra o botão de menu */
-  }
-
-  .topbar ul {
-    flex-direction: column;
-    gap: 5px;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: none;
-    z-index: 999;
-  }
-
-  .topbar ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .topbar ul li a {
-    display: block;
-    width: 100%;
-  }
-
-  .topbar ul.active {
-    display: flex; /* Mostra o menu ao clicar */
-  }
-
-  section {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 100px; /* Espaço para evitar sobreposição com o footer */
-    flex: 1; /* Permite que as seções cresçam para ocupar o espaço disponível */
-  }
-
-  #sobre img,
-  .perfil-image {
-    float: left;
-    display: block;
-    margin-right: 20px;
-  }
-
-  #projetos img {
-    margin-bottom: 0;
-  }
-
-  footer {
-    position: fixed; /* Fixa o footer na parte inferior da página */
-    bottom: 0; /* Coloca o footer na parte inferior da tela */
-    width: 100%; /* Garante que o footer ocupe toda a largura */
-    background-color: rgba(51, 51, 51, 0.7); /* Transparência no fundo do footer */
-    color: white; /* Cor do texto */
-    text-align: center;
-    padding: 10px 0;
-    z-index: 1000;
-  }
-
-  footer.creditos {
-    margin-right: 0; /* Espaço do lado direito é zero */
-  }
-
-  footer.creditos a {
-    margin-right: 10px;
-  }
-
-  footer.social-icons {
-    text-align: center;
-    display: flex; /* Garante que os ícones estejam em linha */
-    justify-content: center; /* Centraliza os ícones */
-    flex-wrap: nowrap; /* Não permite que os ícones quebrem para a próxima linha */
-  }
-
-  footer.social-icons img {
-    max-width: 24px; /* Tamanho ajustado para os ícones */
-    height: auto; /* Mantém a proporção */
-  }
-
-  footer.social-icons a {
-    margin-right: 10px; /* Espaço entre os ícones */
-  }
-
-  footer.social-icons a:hover {
-    filter: brightness(1.2);
-  }
+/* Layout Flexbox para garantir que o conteúdo ocupe o espaço entre o header e o footer */
+body, html {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Topbar */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  padding: 10px;
+  color: white;
+}
+
+/* Seções do conteúdo central */
+section {
+  max-width: 1200px; /* Centraliza o conteúdo e define a largura máxima */
+  margin: 0 auto;
+  padding: 80px 20px 100px; /* Padding ajustado para evitar sobreposição com o footer e o topbar */
+  flex: 1;
+}
+
+/* Footer fixo na parte inferior */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  z-index: 1000;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Conteúdo do footer com espaçamento reduzido e centralizado */
+footer .creditos,
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+footer .creditos a,
+footer .social-icons a {
+  color: #ddd;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+footer .social-icons img {
+  max-width: 20px;
+  height: auto;
+}
+
+footer .creditos a:hover,
+footer .social-icons a:hover {
+  color: #fff;
+  filter: brightness(1.2);
+}
+
 
 /* Estilos para telas médias */
 @media screen and (min-width: 481px) and (max-width: 768px) {
