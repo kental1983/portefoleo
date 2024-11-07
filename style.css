@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto Mono', monospace;
-  background-image: url('../imagens/arnaud-papa-nuW1WqqDzsU-unsplash.jpg');
+  background-image: url('imagens/arnaud-papa-nuW1WqqDzsU-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
