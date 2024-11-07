@@ -1,0 +1,181 @@
+/* Estilos gerais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  background-image: url('../imagens/arnaud-papa-nuW1WqqDzsU-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(4, 151, 28);
+  font-size: 18px;
+  animation: scrollBackground 5s linear infinite;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(4, 151, 28);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  top: 0;
+  z-index: 999;
+}
+
+.topbar {
+  display: flex;
+  justify-content: center; /* Centraliza a topbar inteira */
+  align-items: center;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Adiciona largura total para garantir centralização */
+  z-index: 999;
+}
+
+.topbar .menu-btn {
+  display: none; /* Botão escondido por padrão */
+  font-size: 24px;
+  text-align: center;
+  color: rgb(11, 215, 230);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.topbar nav {
+  display: flex;
+  justify-content: center; /* Mantém centralizado */
+  align-items: center;
+}
+
+.topbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.topbar ul li {
+  margin: 0;
+}
+
+.topbar ul li a {
+  color: rgb(11, 215, 230);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center; /* Centraliza o texto dentro do link */
+  display: block; /* Faz o link ocupar todo o espaço do li */
+}
+
+/* Estilos para seções */
+section {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: transparent;
+  max-width: 1200px;  /* Limita a largura máxima */
+  text-align: center;
+  flex-grow: 1; /* O conteúdo principal se ajusta e ocupa o espaço restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 60px; /* Espaço abaixo da topbar */
+  padding-bottom: 80px; /* Espaço acima do footer */
+  box-sizing: border-box; /* Garante que padding seja incluído no tamanho total */
+}
+
+.sobre h2, .projetos h2, .cv h2, .contatos h2 {
+  text-align: center;
+  color: rgb(4, 151, 28);
+  font-size: 1.8rem;
+}
+
+.sobre p, .projetos p, .cv p, .contatos p {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.perfil-image {
+    max-width: 400px;
+    float: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.sobre img, .projetos img, .cv img, .contatos img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.projetos img {
+  margin-bottom: 10px;
+}
+
+.cv img {
+  max-width: 500px;
+}
+
+.contatos h2 {
+  margin-bottom: 40px;
+}
+
+.contatos p {
+  margin-bottom: 20px;
+}
+
+/* Estilos do footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.3em; /* Ajuste conforme necessário */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex; /* Ativa flexbox */
+  justify-content: space-between; /* Espaçamento entre os itens */
+  align-items: center; /* Alinha verticalmente no centro */
+}
+
+.social-icons {
+  display: flex; /* Ativa flexbox */
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  align-items: center; /* Alinha verticalmente no centro */
+  gap: 10px; /* Espaçamento entre os ícones */
+  flex-grow: 1; /* Faz os ícones crescerem para ocupar o espaço disponível */
+}
+
+.social-icons img {
+  max-width: 30px; /* Define o tamanho máximo dos ícones */
+  height: auto; /* Mantém a proporção do ícone */
+}
+
+.creditos {
+  font-size: 12px; /* Tamanho menor para os créditos */
+  color: rgba(255, 255, 255, 0.6); /* Cor mais suave */
+  text-align: right; /* Alinha o texto à direita */
+}
+
+/* Estilos gerais */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+  
