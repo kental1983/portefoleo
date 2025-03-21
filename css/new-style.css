@@ -1,0 +1,261 @@
+body {
+    font-family: 'Courier New', Courier, monospace; /* Fonte do texto */
+    color: green; /* Cor do texto */
+    background-color: black; /* Cor de fundo */
+    text-align: center; /* Alinhamento do texto */
+    margin: 0; /* Margem zero */
+    padding: 0; /* Padding zero */
+    background-image: url('../imagens/arnaud-papa-nuW1WqqDzsU-unsplash.jpg'); /* Imagem de fundo */
+    background-attachment: fixed; /* Fundo fixo */
+    background-size: cover; /* Cobrir toda a área */
+    background-position: left center; /* Ajustar a posição inicial da imagem de fundo */
+    animation: background-rotate 30s linear infinite; /* Adicionar animação de rotação */
+    overflow: hidden; /* Garantir que o fundo não afeta o texto */
+}
+
+@keyframes background-rotate {
+    0% {
+        background-position: left center; /* Posição inicial da animação */
+    }
+    100% {
+        background-position: right center; /* Posição final da animação */
+    }
+}
+
+.topbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo transparente */
+    overflow: hidden; /* Esconder overflow */
+    padding: 10px 0; /* Padding superior e inferior */
+    position: fixed; /* Posição fixa no topo */
+    top: 0; /* Alinhado ao topo */
+    width: 100%; /* Largura total */
+    z-index: 1000; /* Z-index alto */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centralizar itens */
+    align-items: center; /* Alinhar itens ao centro */
+}
+
+.topbar ul {
+    list-style-type: none; /* Remover estilo da lista */
+    margin: 0; /* Margem zero */
+    padding: 0; /* Padding zero */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centralizar itens */
+}
+
+.topbar ul li {
+    display: inline; /* Exibir em linha */
+    margin-right: 20px; /* Margem à direita */
+}
+
+.topbar ul li a {
+    color: green; /* Letras verdes */
+    text-decoration: none; /* Remover sublinhado */
+    padding: 10px 20px; /* Padding interno */
+}
+
+.topbar .menu-button {
+    background-color: transparent; /* Fundo transparente */
+    color: green; /* Letras verdes */
+    border: 1px solid green; /* Borda verde */
+    padding: 10px 20px; /* Padding interno */
+    cursor: pointer; /* Cursor de ponteiro */
+    display: none; /* Não exibir por padrão */
+}
+
+header {
+    margin-top: 60px; /* Margem superior */
+}
+
+header h1 a {
+    font-weight: bold; /* Texto em negrito */
+    font-style: italic; /* Texto em itálico */
+    text-decoration: none; /* Remover sublinhado */
+}
+
+#splash-screen {
+    background-image: url('../imagens/terry-vlisidis-WsEbnsnKbUE-unsplash.jpg'); /* Imagem de fundo */
+    background-size: cover; /* Cobrir toda a área */
+    background-position: center; /* Centralizar imagem */
+    filter: brightness(0.5); /* Reduzir brilho */
+    height: 100vh; /* Altura total da viewport */
+    width: 100vw; /* Largura total da viewport */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Direção da flexbox em coluna */
+    justify-content: center; /* Centralizar itens */
+    align-items: center; /* Alinhar itens ao centro */
+    color: green; /* Letras verdes */
+    position: fixed; /* Posição fixa */
+    top: 0; /* Alinhado ao topo */
+    left: 0; /* Alinhado à esquerda */
+    z-index: 9999; /* Z-index alto */
+}
+
+#sobre, #projetos, #cv, #recomendacoes, #contatos {
+    padding: 60px 20px; /* Padding interno */
+    background: rgba(0, 0, 0, 0.7); /* Fundo transparente */
+    margin: 20px auto; /* Margem superior/inferior e centralização horizontal */
+    max-width: 800px; /* Largura máxima */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.perfil-image {
+    max-width: 200px; /* Largura máxima */
+    display: block; /* Exibir como bloco */
+    margin: 0 auto 10px auto; /* Centralizar e adicionar margem inferior */
+    border-radius: 50%; /* Bordas arredondadas */
+}
+
+.modal {
+    display: none; /* Não exibir por padrão */
+    position: fixed; /* Posição fixa */
+    z-index: 1000; /* Z-index alto */
+    left: 0; /* Alinhado à esquerda */
+    top: 0; /* Alinhado ao topo */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Permitir rolagem */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente */
+}
+
+.modal-content {
+    background-color: #333; /* Fundo escuro */
+    margin: 15% auto; /* Margem superior e centralização horizontal */
+    padding: 20px; /* Padding interno */
+    border: 1px solid #888; /* Borda cinza */
+    width: 80%; /* Largura */
+    color: green; /* Letras verdes */
+    font-family: 'Courier New', Courier, monospace; /* Fonte do texto */
+}
+
+.modal-content h2 {
+    color: green; /* Letras verdes */
+}
+
+.modal-content ul {
+    text-align: left; /* Alinhamento à esquerda */
+}
+
+.close {
+    color: #aaa; /* Cor cinza */
+    float: right; /* Flutuar à direita */
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+}
+
+.close:hover,
+.close:focus {
+    color: white; /* Cor branca ao passar o rato */
+    text-decoration: none; /* Remover sublinhado */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.5); /* Fundo com 50% de transparência */
+    color: green; /* Letras verdes */
+    padding: 10px 0; /* Reduzir o padding superior e inferior */
+    position: fixed; /* Posição fixa */
+    width: 100%; /* Largura total */
+    bottom: 0; /* Alinhado ao fundo */
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Espaçar itens */
+    align-items: center; /* Alinhar itens ao centro */
+    flex-wrap: wrap; /* Permitir quebra de linha */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Margem horizontal */
+    display: inline-block; /* Garantir que os ícones fiquem em linha */
+}
+
+.social-icons img {
+    width: 32px; /* Largura dos ícones */
+    height: 32px; /* Altura dos ícones */
+}
+
+.creditos {
+    margin-top: 10px; /* Margem superior */
+    text-align: right; /* Alinhamento à direita */
+    flex: 1; /* Flexibilidade */
+}
+
+button, .button {
+    background-color: transparent; /* Fundo transparente */
+    color: green; /* Letras verdes */
+    border: 1px solid green; /* Borda verde */
+    padding: 10px 20px; /* Padding interno */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-family: 'Courier New', Courier, monospace; /* Fonte do texto */
+}
+
+button:hover, .button:hover {
+    background-color: green; /* Fundo verde ao passar o rato */
+    color: black; /* Letras pretas ao passar o rato */
+}
+
+@media screen and (max-width: 768px) {
+    .menu-button {
+        display: block; /* Exibir botão de menu */
+    }
+    .topbar {
+        justify-content: flex-start; /* Alinhar itens ao início (esquerda) */
+    }
+    .topbar ul {
+        display: none; /* Não exibir lista por padrão */
+        flex-direction: column; /* Direção da flexbox em coluna */
+    }
+    .topbar.active ul {
+        display: flex; /* Exibir lista ao ativar */
+    }
+    .perfil-image {
+        max-width: 100px; /* Largura máxima */
+    }
+    .button img {
+        max-width: 100%; /* Largura máxima */
+    }
+    .social-icons img {
+        width: 24px; /* Largura dos ícones */
+        height: 24px; /* Altura dos ícones */
+    }
+    .social-icons a {
+        margin: 5px; /* Adicionar margem para evitar sobreposição */
+    }
+    #sobre, #projetos, #contatos, #cv {
+        padding-top: 60px; /* Padding superior */
+    }
+    footer {
+        flex-direction: column; /* Direção da flexbox em coluna */
+        align-items: center; /* Alinhar itens ao centro */
+        padding: 5px 0; /* Reduzir ainda mais o padding superior e inferior */
+    }
+    .creditos {
+        display: none; /* Esconder os créditos em dispositivos móveis */
+    }
+    #projetos-list img {
+        width: 100%; /* Ajustar a largura da imagem para 100% */
+        height: auto; /* Manter a proporção da imagem */
+    }
+    .software {
+        display: flex; /* Usar flexbox */
+        flex-direction: column; /* Direção da flexbox em coluna */
+        align-items: center; /* Alinhar itens ao centro */
+    }
+    .software a.button {
+        margin: 5px 0; /* Adicionar margem para evitar sobreposição */
+        width: 90%; /* Ajustar a largura dos botões */
+        text-align: center; /* Centralizar o texto dos botões */
+    }
+}
+
+header {
+    transition: opacity 0.5s ease; /* Transição suave de opacidade */
+}
+
+header.hidden {
+    opacity: 0; /* Tornar header invisível */
+}
+
+html, body {
+    height: 100%; /* Altura total */
+    overflow: auto; /* Permitir que o texto deslize */
+}

@@ -1,0 +1,48 @@
+{
+    "software": [
+        {
+            "nome": "GitHub",
+            "descricao": "Plataforma de hospedagem de código-fonte com controle de versão.",
+            "comentario": "Excelente para colaboração em projetos de código aberto.",
+            "pros": "Facilita a colaboração, controle de versão robusto, integração com várias ferramentas.",
+            "contras": "Pode ser complexo para iniciantes, algumas funcionalidades avançadas são pagas."
+        },
+        {
+            "nome": "Docker",
+            "descricao": "Plataforma para desenvolvimento, envio e execução de aplicações em containers.",
+            "comentario": "Facilita a criação de ambientes de desenvolvimento consistentes.",
+            "pros": "Isolamento de aplicações, portabilidade, eficiência de recursos.",
+            "contras": "Curva de aprendizado, pode ser pesado em sistemas com poucos recursos."
+        },
+        {
+            "nome": "DBeaver",
+            "descricao": "Ferramenta universal de gerenciamento de banco de dados.",
+            "comentario": "Suporta uma ampla variedade de bancos de dados.",
+            "pros": "Interface amigável, suporte a múltiplos bancos de dados, funcionalidades avançadas.",
+            "contras": "Pode ser lento com bancos de dados grandes, algumas funcionalidades são pagas."
+        }
+    ],
+    "hardware": [
+        {
+            "nome": "Raspberry Pi",
+            "descricao": "Computador de placa única para projetos de programação e eletrônica.",
+            "comentario": "Ideal para projetos de IoT e automação.",
+            "pros": "Custo baixo, versatilidade, comunidade ativa.",
+            "contras": "Desempenho limitado, pode precisar de acessórios adicionais."
+        },
+        {
+            "nome": "Arduino",
+            "descricao": "Plataforma de prototipagem eletrônica de código aberto.",
+            "comentario": "Perfeito para iniciantes em eletrônica.",
+            "pros": "Fácil de usar, grande quantidade de tutoriais e exemplos, expansível.",
+            "contras": "Capacidades limitadas em comparação com microcontroladores mais avançados."
+        },
+        {
+            "nome": "SSD",
+            "descricao": "Unidade de estado sólido para melhorar o desempenho do seu computador.",
+            "comentario": "Aumenta significativamente a velocidade de leitura e escrita.",
+            "pros": "Desempenho rápido, durabilidade, menor consumo de energia.",
+            "contras": "Custo por gigabyte mais alto que HDDs, capacidade de armazenamento geralmente menor."
+        }
+    ]
+}

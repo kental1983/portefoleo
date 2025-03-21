@@ -6,35 +6,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>João Quental</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script/display.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/new-style.css"> <!-- Usar o novo arquivo CSS -->
 </head>
 
 <body>
-    <div id="splash-screen" style="background-image: url('imagens/terry-vlisidis-WsEbnsnKbUE-unsplash.jpg'); background-size: cover; background-position: center; filter: brightness(0.5);">
+    <nav class="topbar">
+        <button class="menu-button" onclick="toggleMenu()">Menu</button> <!-- Botão de menu -->
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#cv">Currículo</a></li>
+            <li><a href="#recomendacoes">Recomendações</a></li>
+            <li><a href="#contatos">Contactos</a></li>
+        </ul>
+    </nav>
+    
+    <header id="home" style="margin-top: 60px;"> <!-- Adicionar margem superior para evitar sobreposição -->
+        <h1><a href="#home" style="font-weight: bold; font-style: italic; text-decoration: none;">João Quental</a></h1> <!-- Nome como link para home -->
+    </header>
+    
+    <div id="splash-screen" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
         <h1>Bem-vindo</h1>
         <p>A Carregar...</p>
     </div>
-    <header>
-        <nav class="topbar">
-            <button class="menu-btn">&#9776;</button>
-            <ul>
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li><a href="#projetos" class="nav-link">Projetos</a></li>
-                <li><a href="#cv" class="nav-link">Currículo</a></li>
-                <li><a href="#contatos" class="nav-link">Contatos</a></li>
-            </ul>
-        </nav>    
-    </header>
-
-    <section id="home" class="section">
-        <h2>João Quental</h2>
-        <ul>
-            <li><a href="#"><img src="imagens/FB_IMG_1467234282183-Photoroom.jpg" alt="Minha Foto de Perfil" class="perfil-image"></a></li>
-        </ul>
-    </section>
     
-    <section id="sobre" class="section active">
+    <section id="sobre" class="sobre">
+        <img src="imagens/FB_IMG_1467234282183-Photoroom.jpg" alt="Imagem de perfil" class="perfil-image">
         <h2>Sobre Mim</h2>
         <p>Olá, sou João Miguel de Bastos Quental, um apaixonado por tecnologia e desenvolvimento web. Possuo competências em SQL, HTML, PHP, Javascript, alguma experiência em C#, entre outras. Esta paixão pela tecnologia conduziu-me à exploração da criação de soluções web envolventes e funcionais.</p>
 
@@ -47,7 +46,7 @@
         <p>Se estiver interessado em discutir projetos emocionantes relacionados com o desenvolvimento web ou partilhar experiências em tecnologia, não hesite em contactar-me. Vamos colaborar e criar algo incrível juntos!</p>
     </section>
     
-    <section id="projetos" class="section hidden">
+    <section id="projetos" class="centralizado">
         <h2>Projetos</h2>
         <div id="projetos-list">
             <!-- Outros projetos aqui -->
@@ -57,44 +56,218 @@
                 <p>Calculadora de IPv4</p>
                 <p>A Calculadora de IP é uma ferramenta poderosa desenvolvida em PHP para auxiliar na gestão de redes IP. Ela permite calcular informações essenciais, como endereço de rede, intervalo de IPs, máscara de sub-rede e muito mais. Basta inserir o endereço IP e o número de bits da sub-rede para obter resultados precisos e facilitar a configuração da sua rede.</p>
                 <!-- Adicione um link ou botão para a página calculadora.php -->
-                <a href="calculadora.php" class="button">
+                <a href="php/calculadora.php">
                     <div>
-                        <img src="imagens/mascara-de-sub-rede-768x457.jpg" alt="Ícone da Calculadora" class="perfil-image">
+                        <img id="imagem-responsiva" src="imagens/mascara-de-sub-rede-768x457.jpg" alt="Ícone da Calculadora">
                     </div>
                 </a>                
             </div>
         </div>
     </section>
-
-    <section id="cv" class="section hidden">
+    
+    <section id="cv" class="centralizado">
         <h2>Currículo</h2>
-        <p>Currículo vitae disponível no link abaixo para visualização ou para download:</p>
-        <a href="pdf/João_Quental.pdf" target="_blank">Currículo</a>
+        <a href="pdf/João_Quental.pdf" target="_blank" class="button">Visualizar Currículo</a>
+        <a href="pdf/João_Quental.pdf" download class="button">Baixar Currículo</a>
     </section>
     
-    <section id="contatos" class="section hidden">
-        <h2>Contatos</h2>
-        <a href="kental@hotmail.com" class="social-icons"><img src="imagens/email.png" alr="e-mail"><p>kental1983@hotmail.com</p></a>
-        <a href="https://wa.me/+35191734040" class="social-icons"><img src="imagens/phone-message.png" alt="whatapp"><p>TLM: +351917342404</p></a>
+    <section id="recomendacoes" class="centralizado">
+        <h2>Recomendações</h2>
+        <div class="software">
+            <h2>Software</h2>
+            <a href="#vscode" class="button" onclick="openModal('vscode-modal')">Visual Studio Code</a>
+            <a href="#dbeaver" class="button" onclick="openModal('dbeaver-modal')">Dbeaver</a>
+            <a href="#debian" class="button" onclick="openModal('debian-modal')">Debian</a>
+            <a href="#vim" class="button" onclick="openModal('vim-modal')">Vim</a>
+            <a href="#phpmyadmin" class="button" onclick="openModal('phpmyadmin-modal')">phpMyAdmin</a>
+        </div>        
+    </section>
+
+    <!-- Modal para Visual Studio Code -->
+    <div id="vscode-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('vscode-modal')">&times;</span>
+            <h2>Visual Studio Code</h2>
+            <p><strong>Descrição:</strong> Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft. Ele é leve, poderoso e extensível, suportando uma ampla gama de linguagens de programação.Editor de código-fonte leve e poderoso, desenvolvido pela Microsoft. Suporta várias linguagens de programação e é altamente personalizável através de extensões.</p>
+            <p><strong>Principais Funcionalidades:</strong></p>
+            <ul>
+                <li>Autocompletação inteligente de sintaxe e semântica com IntelliSense</li>
+                <li>Suporte para GitHub</li>
+                <li>Depuração de código avançado</li>
+                <li>Compatibilidade com extensões de terceiros</li>
+                <li>Temas personalizáveis</li>
+            </ul>
+            <p><strong>Vantagens:</strong></p>
+            <ul>
+                <li>Gratuito e de código aberto</li>
+                <li>Grande variedade de extensões</li>
+                <li>Suporte nativo a várias linguagens</li>
+                <li>Interface moderna e intuitiva</li>
+            </ul>
+            <p><strong>Desvantagens:</strong></p>
+            <ul>
+                <li>Consumo de memória pode ser alto com muitas extensões</li>
+                <li>Algumas funcionalidades avançadas requerem configuração adicional</li>
+            </ul>
+            <p><strong>Requisitos do Sistema:</strong></p>
+            <ul>
+                <li>Sistema Operativo: Windows, macOS, Linux</li>
+                <li>Memória: 1 GB de RAM (recomendado 2 GB)</li>
+                <li>Espaço em Disco: 200 MB</li>
+            </ul>
+            <p><strong>Instalação e Configuração:</strong></p>
+            <p>Para instalar Visual Studio Code, visite o site oficial: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></p>
+            <p>Para configurar o Visual Studio Code, visite a documentação oficial: <a href="https://code.visualstudio.com/docs" target="_blank">https://code.visualstudio.com/docs</a></p>
+        </div>
+    </div>
+
+    <!-- Modal para Dbeaver -->
+    <div id="dbeaver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('dbeaver-modal')">&times;</span>
+            <h2>Dbeaver</h2>
+            <p><strong>Descrição:</strong> Dbeaver é uma ferramenta de administração de base de dados universal que suporta todos os principais bancos de dados, incluindo MySQL, PostgreSQL, SQLite, Oracle, e muitos outros.</p>
+            <p><strong>Vantagens:</strong></p>
+            <ul>
+                <li>Suporte para múltiplos bancos de dados</li>
+                <li>Interface intuitiva e fácil de usar</li>
+                <li>Ferramentas avançadas de administração de base de dados</li>
+                <li>Gratuito e de código aberto</li>
+            </ul>
+            <p><strong>Desvantagens:</strong></p>
+            <ul>
+                <li>Consumo de memória pode ser alto</li>
+                <li>Algumas funcionalidades avançadas estão disponíveis apenas na versão paga</li>
+            </ul>
+            <p><strong>Requisitos do Sistema:</strong></p>
+            <ul>
+                <li>Sistema Operativo: Windows, macOS, Linux</li>
+                <li>Memória: 1 GB de RAM (recomendado 2 GB)</li>
+                <li>Espaço em Disco: 200 MB</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal para Debian -->
+    <div id="debian-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('debian-modal')">&times;</span>
+            <h2>Debian</h2>
+            <p><strong>Descrição:</strong> Debian é um sistema operativo livre e de código aberto, conhecido por sua estabilidade e segurança. Ele é amplamente utilizado em servidores e desktops.</p>
+            <p><strong>Vantagens:</strong></p>
+            <ul>
+                <li>Gratuito e de código aberto</li>
+                <li>Estável e seguro</li>
+                <li>Grande comunidade de suporte</li>
+                <li>Ampla gama de pacotes de software</li>
+            </ul>
+            <p><strong>Desvantagens:</strong></p>
+            <ul>
+                <li>Instalação e configuração podem ser complexas para iniciantes</li>
+                <li>Alguns pacotes podem estar desatualizados</li>
+            </ul>
+            <p><strong>Requisitos do Sistema:</strong></p>
+            <ul>
+                <li>Processador: 1 GHz ou mais rápido</li>
+                <li>Memória: 512 MB de RAM (recomendado 1 GB)</li>
+                <li>Espaço em Disco: 10 GB</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal para Vim -->
+    <div id="vim-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('vim-modal')">&times;</span>
+            <h2>Vim</h2>
+            <p><strong>Descrição:</strong> Vim é um editor de texto altamente configurável, conhecido por sua eficiência e flexibilidade. Ele é amplamente utilizado por desenvolvedores e administradores de sistemas.</p>
+            <p><strong>Vantagens:</strong></p>
+            <ul>
+                <li>Leve e rápido</li>
+                <li>Gratuito e de código aberto</li>
+                <li>Altamente configurável</li>
+                <li>Suporte para múltiplas linguagens de programação</li>
+            </ul>
+            <p><strong>Desvantagens:</strong></p>
+            <ul>
+                <li>Curva de aprendizado íngreme</li>
+                <li>Interface baseada em texto pode ser desafiadora para iniciantes</li>
+            </ul>
+            <p><strong>Requisitos do Sistema:</strong></p>
+            <ul>
+                <li>Sistema Operativo: Windows, macOS, Linux</li>
+                <li>Memória: 256 MB de RAM</li>
+                <li>Espaço em Disco: 50 MB</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal para phpMyAdmin -->
+    <div id="phpmyadmin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('phpmyadmin-modal')">&times;</span>
+            <h2>phpMyAdmin</h2>
+            <p><strong>Descrição:</strong> phpMyAdmin é uma ferramenta de administração de base de dados baseada na web, que permite gerir bases de dados MySQL e MariaDB através de uma interface gráfica.</p>
+            <p><strong>Vantagens:</strong></p>
+            <ul>
+                <li>Gratuito e de código aberto</li>
+                <li>Interface web amigável</li>
+                <li>Ferramentas avançadas de administração de base de dados</li>
+                <li>Suporte para múltiplos bancos de dados</li>
+            </ul>
+            <p><strong>Desvantagens:</strong></p>
+            <ul>
+                <li>Consumo de recursos pode ser alto</li>
+                <li>Configuração inicial pode ser complexa</li>
+            </ul>
+            <p><strong>Requisitos do Sistema:</strong></p>
+            <ul>
+                <li>Sistema Operativo: Windows, macOS, Linux</li>
+                <li>Servidor Web: Apache, Nginx</li>
+                <li>PHP: Versão 7.1 ou superior</li>
+                <li>Base de Dados: MySQL 5.5 ou superior, MariaDB 5.5 ou superior</li>
+            </ul>
+        </div>
+    </div>
+    
+    <section id="contatos" class="centralizado" style="margin-bottom: 60px;">
+        <h2>Contactos</h2>
+        <a href="mailto:kental1983@hotmail.com">kental1983@hotmail</a>
+        <p><a href="tel:+351917342404">TLM: +351917342404</a></p> <!-- Link de chamada -->
     </section>
     
     <footer>
         <div class="social-icons">
-            <a href="#"><p>&copy; 2023 João Quental</p></a>
-            <a href="https://wa.me/+35191734040"><img src="imagens/phone-message.png" alt="whatapp"></a>
+            <a href="https://wa.me/+351917342404"><img src="imagens/phone-message.png" alt="whatsapp"></a> <!-- Link para WhatsApp -->
             <a href="https://replit.com/@JoaoQuental1"><img src="imagens/icons8-replit-48.png" alt="Replit"></a>
             <a href="https://www.linkedin.com/in/jo%C3%A3o-quental-8b70b438/"><img src="imagens/linkedin.png" alt="linkedin"></a>
-            <a href="https://github.com/kental1983"><img src="imagens/gitlab.png" alt="github"></a>
+            <a href="https://github.com/joaoquental1"><img src="imagens/gitlab.png" alt="github"></a>
+            <a href="mailto:kental1983@hotmail.com"><img src="imagens/email.png" alt="email"></a> <!-- Link de e-mail corrigido -->
         </div>
         <div class="creditos">
-        <p>Foto de <a href="https://unsplash.com/pt-br/@vlisidis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Terry Vlisidis</a> na <a href="https://unsplash.com/pt-br/fotografias/WsEbnsnKbUE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-        <p>Foto de <a href="https://unsplash.com/pt-br/@arnaudpapa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Arnaud Papa</a> na <a href="https://unsplash.com/pt-br/fotografias/nuW1WqqDzsU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+            <p>Foto de <a href="https://unsplash.com/pt-br/@vlisidis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Terry Vlisidis</a> na <a href="https://unsplash.com/pt-br/fotografias/WsEbnsnKbUE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+            <p>Foto de <a href="https://unsplash.com/pt-br/@arnaudpapa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Arnaud Papa</a> na <a href="https://unsplash.com/pt-br/fotografias/nuW1WqqDzsU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        </div>
+        <div>
+            <p>&copy; 2023 João Quental</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        function toggleMenu() {
+            document.querySelector('.topbar').classList.toggle('active');
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
-            const menuLinks = document.querySelectorAll('.menu a');
+            const menuLinks = document.querySelectorAll('.menu a, #sidebar a');
             
             menuLinks.forEach(function(link) {
                 link.addEventListener('click', function(e) {
@@ -105,12 +278,24 @@
                 });
             });
         });
+
+        // Adicionar evento de rolagem para esconder o header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('hidden');
+            } else {
+                header.classList.remove('hidden');
+            }
+        });
     </script>
     <!-- Inclua o arquivo JavaScript time.js -->
     <script src="script/time.js"></script>
-    <script src="script/scroolbar.js"></script>
+    <script src="script/croolbar.js"></script>
     <script src="script/scrollbutton.js"></script>
-    <script src="script/menu.js"></script>
+    <script src="script/display.js"></script>
+    <script src="script/modal.js"></script>
+    <script src="script/scroll.js"></script>
 </body>
 </html>
 

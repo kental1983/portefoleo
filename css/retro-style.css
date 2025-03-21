@@ -1,0 +1,339 @@
+/* Estilos gerais para todas as larguras de tela */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace; /* Fonte semelhante ao MS-DOS */
+  background-color: black; /* Fundo preto para aparência retro */
+  color: green; /* Texto verde para aparência retro */
+  font-size: 18px;
+}
+
+/* Estilos para cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+  color: green; /* Texto verde */
+  text-shadow: 0 0 10px green; /* Efeito de brilho para aparência moderna */
+}
+
+/* Estilos para parágrafos */
+p {
+  color: green; /* Texto verde */
+  text-shadow: 0 0 10px green; /* Efeito de brilho para aparência moderna */
+}
+
+/* Estilos para links */
+a {
+  color: green; /* Texto verde */
+  text-decoration: none; /* Remover sublinhado */
+  text-shadow: 0 0 10px green; /* Efeito de brilho para aparência moderna */
+}
+
+a:hover {
+  text-decoration: underline; /* Adicionar sublinhado ao passar o mouse */
+}
+
+/* Estilos para listas */
+ul, ol {
+  color: green; /* Texto verde */
+  text-shadow: 0 0 10px green; /* Efeito de brilho para aparência moderna */
+}
+
+/* Estilos para botões */
+button {
+  background-color: black; /* Fundo preto */
+  color: green; /* Texto verde */
+  border: 1px solid green; /* Borda verde */
+  font-family: 'Courier New', Courier, monospace; /* Fonte semelhante ao MS-DOS */
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: green; /* Fundo verde ao passar o mouse */
+  color: black; /* Texto preto ao passar o mouse */
+}
+
+/* Estilos para inputs */
+input, textarea {
+  background-color: black; /* Fundo preto */
+  color: green; /* Texto verde */
+  border: 1px solid green; /* Borda verde */
+  font-family: 'Courier New', Courier, monospace; /* Fonte semelhante ao MS-DOS */
+  padding: 10px;
+}
+
+/* Estilos para tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid green; /* Borda verde */
+  color: green; /* Texto verde */
+  text-shadow: 0 0 10px green; /* Efeito de brilho para aparência moderna */
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+.perfil-image {
+  background-image: url('../imagens/FB_IMG_1467234282183-Photoroom.jpg'); 
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 10px auto; /* Centralize a imagem e adicione margem inferior */
+  border-radius: 50%;
+  /* Remova float e margem direita */
+}
+
+/* Estilos para centralizar o conteúdo em dispositivos móveis */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Ajuste a largura da barra lateral para ocupar a largura da tela */
+    height: auto; /* Ajuste a altura para auto */
+    position: relative; /* Ajuste a posição para relativa */
+  }
+  .content {
+    margin-left: 0; /* Não use margem à esquerda no conteúdo principal */
+  }
+  .topbar ul {
+    flex-direction: column; /* Alinhe os itens da lista verticalmente */
+  }
+  .topbar a {
+    padding: 10px; /* Ajuste o padding dos links */
+  }
+  #sobre, #projetos, #contatos, #cv {
+    margin-left: 10px; /* Ajuste a margem à esquerda */
+    margin-right: 10px; /* Ajuste a margem à direita */
+    padding-top: 60px; /* Ajuste o padding-top para evitar que o topbar tape o título */
+  }
+  .perfil-image {
+    max-width: 100px; /* Ajuste o tamanho da imagem de perfil */
+    background-image: url('../imagens/FB_IMG_1467234282183-Photoroom.jpg'); /* Usar a imagem especificada */
+  }
+  .button img {
+    max-width: 100%; /* Ajuste o tamanho da imagem do botão */
+  }
+  .social-icons img {
+    width: 24px; /* Ajuste o tamanho dos ícones */
+    height: 24px; /* Ajuste o tamanho dos ícones */
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: black; /* Fundo preto para aparência retro */
+    color: green; /* Texto verde para aparência retro */
+    font-family: 'Courier New', Courier, monospace; /* Fonte semelhante ao MS-DOS */
+  }
+  header {
+    background-color: transparent; /* Remover fundo azul */
+  }
+  #contatos {
+    order: 1; /* Mover a seção de contatos acima do footer */
+    margin-bottom: 20px; /* Adicionar margem inferior para evitar sobreposição */
+  }
+  footer {
+    order: 2; /* Manter o footer abaixo da seção de contatos */
+  }
+}
+
+/* Estilos para dispositivos móveis em modo paisagem */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .sidebar {
+    width: 100%; /* Ajuste a largura da barra lateral para ocupar a largura da tela */
+    height: auto; /* Ajuste a altura para auto */
+    position: relative; /* Ajuste a posição para relativa */
+  }
+  .content {
+    margin-left: 0; /* Não use margem à esquerda no conteúdo principal */
+  }
+  .topbar ul {
+    flex-direction: row; /* Alinhe os itens da lista horizontalmente */
+  }
+  .topbar a {
+    padding: 10px; /* Ajuste o padding dos links */
+  }
+  #sobre, #projetos, #contatos, #cv {
+    margin-left: 10px; /* Ajuste a margem à esquerda */
+    margin-right: 10px; /* Ajuste a margem à direita */
+    padding-top: 60px; /* Ajuste o padding-top para evitar que o topbar tape o título */
+  }
+  .perfil-image {
+    max-width: 100px; /* Ajuste o tamanho da imagem de perfil */
+  }
+  .button img {
+    max-width: 100%; /* Ajuste o tamanho da imagem do botão */
+  }
+  .social-icons img {
+    width: 24px; /* Ajuste o tamanho dos ícones */
+    height: 24px; /* Ajuste o tamanho dos ícones */
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: black; /* Fundo preto para aparência retro */
+    color: green; /* Texto verde para aparência retro */
+    font-family: 'Courier New', Courier, monospace; /* Fonte semelhante ao MS-DOS */
+  }
+  header {
+    background-color: transparent; /* Remover fundo azul */
+  }
+  #contatos {
+    order: 1; /* Mover a seção de contatos acima do footer */
+    margin-bottom: 20px; /* Adicionar margem inferior para evitar sobreposição */
+  }
+  footer {
+    order: 2; /* Manter o footer abaixo da seção de contatos */
+  }
+}
+
+/* Estilos para a topbar */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Ajustar a cor de fundo */
+  color: green; /* Ajustar a cor do texto */
+  text-align: center; /* Centralizar o texto horizontalmente */
+  padding: 10px 0; /* Reduzir o padding superior e inferior */
+  z-index: 1000;
+}
+
+.topbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centralizar os itens da lista horizontalmente */
+  padding: 0;
+  margin: 0;
+}
+
+.topbar a {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+  padding: 10px 20px; /* Reduzir o padding esquerdo e direito */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilos para o botão de menu em dispositivos móveis */
+.menu-button {
+  display: none;
+  background-color: black;
+  color: green;
+  border: 1px solid green;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+  .topbar ul {
+    display: none;
+  }
+  .topbar.active ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Estilos para esconder o header ao deslizar */
+header {
+  transition: opacity 0.5s ease;
+}
+
+header.hidden {
+  opacity: 0;
+}
+
+/* Estilos para o splash screen em tela cheia */
+#splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura total da viewport */
+  width: 100vw; /* Largura total da viewport */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* Estilos para os modais */
+.modal {
+  display: none; /* Escondido por padrão */
+  position: fixed; /* Fixo na tela */
+  z-index: 1000; /* Acima de outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Habilitar rolagem se necessário */
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+}
+
+.modal-content {
+  background-color: #333;
+  margin: 5% auto; /* Centralizar verticalmente */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%; /* Largura da janela modal */
+  max-width: 600px; /* Largura máxima da janela modal */
+  color: white;
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Ajustes para dispositivos móveis */
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 95%; /* Ajuste a largura da janela modal para dispositivos móveis */
+    padding: 10px; /* Reduza o padding */
+  }
+  .topbar a {
+    padding: 5px 10px; /* Reduza o padding dos links */
+  }
+  #sobre, #projetos, #contatos, #cv {
+    margin-left: 5px; /* Ajuste a margem à esquerda */
+    margin-right: 5px; /* Ajuste a margem à direita */
+    padding-top: 50px; /* Ajuste o padding-top para evitar que o topbar tape o título */
+  }
+  .perfil-image {
+    max-width: 80px; /* Ajuste o tamanho da imagem de perfil */
+  }
+  .button img {
+    max-width: 100%; /* Ajuste o tamanho da imagem do botão */
+  }
+  .social-icons img {
+    width: 20px; /* Ajuste o tamanho dos ícones */
+    height: 20px; /* Ajuste o tamanho dos ícones */
+  }
+}
