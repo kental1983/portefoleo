@@ -44,4 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Garantir que o menu esteja fechado por padrão em dispositivos móveis
+    if (window.innerWidth <= 768) {
+        closeMenu();
+    }
 });
