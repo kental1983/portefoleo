@@ -22,3 +22,8 @@ loadCSSBasedOnWidth();
 
 // Adicione um ouvinte de evento de redimensionamento da janela para atualizar os estilos quando a largura da tela muda
 window.addEventListener('resize', loadCSSBasedOnWidth);
+
+function toggleMenu() {
+    const topbar = document.querySelector('.topbar');
+    topbar.classList.toggle('active');
+}

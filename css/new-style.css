@@ -39,8 +39,12 @@ body {
     list-style-type: none; /* Remover estilo da lista */
     margin: 0; /* Margem zero */
     padding: 0; /* Padding zero */
-    display: flex; /* Usar flexbox */
+    display: none; /* Esconder lista por padrão */
     justify-content: center; /* Centralizar itens */
+}
+
+.topbar.active ul {
+    display: flex; /* Exibir lista ao ativar */
 }
 
 .topbar ul li {
@@ -244,6 +248,20 @@ button:hover, .button:hover {
         margin: 5px 0; /* Adicionar margem para evitar sobreposição */
         width: 90%; /* Ajustar a largura dos botões */
         text-align: center; /* Centralizar o texto dos botões */
+    }
+    #cv .button {
+        display: block; /* Exibir botões como blocos */
+        width: 90%; /* Ajustar a largura dos botões */
+        margin: 10px auto; /* Adicionar margem para evitar sobreposição e centralizar */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .topbar ul {
+        display: flex; /* Exibir lista em telas maiores */
+    }
+    .menu-button {
+        display: none; /* Esconder botão de menu em telas maiores */
     }
 }
 
