@@ -30,14 +30,16 @@
 
 <body>
     <nav class="topbar">
-        <button class="menu-button" onclick="toggleMenu()">Menu</button> <!-- Botão de menu -->
+        <button class="menu-button" onclick="toggleMenu()">
+            <span class="menu-icon">&#9776;</span>
+        </button> <!-- Botão de menu -->
         <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#cv">Currículo</a></li>
-            <li><a href="#recomendacoes">Recomendações</a></li>
-            <li><a href="#contatos">Contactos</a></li>
+            <li><a href="#home" onclick="closeMenu()">Início</a></li>
+            <li><a href="#sobre" onclick="closeMenu()">Sobre</a></li>
+            <li><a href="#projetos" onclick="closeMenu()">Projetos</a></li>
+            <li><a href="#cv" onclick="closeMenu()">Currículo</a></li>
+            <li><a href="#recomendacoes" onclick="closeMenu()">Recomendações</a></li>
+            <li><a href="#contatos" onclick="closeMenu()">Contactos</a></li>
         </ul>
     </nav>
     
@@ -274,6 +276,10 @@
     <script>
         function toggleMenu() {
             document.querySelector('.topbar').classList.toggle('active');
+        }
+
+        function closeMenu() {
+            document.querySelector('.topbar').classList.remove('active');
         }
 
         function openModal(modalId) {

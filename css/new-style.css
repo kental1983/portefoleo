@@ -54,13 +54,18 @@ body {
     padding: 10px 20px; /* Padding interno */
 }
 
-.topbar .menu-button {
+.menu-button {
     background-color: transparent; /* Fundo transparente */
     color: green; /* Letras verdes */
     border: 1px solid green; /* Borda verde */
     padding: 10px 20px; /* Padding interno */
     cursor: pointer; /* Cursor de ponteiro */
-    display: none; /* Não exibir por padrão */
+    display: flex; /* Exibir como flexbox */
+    align-items: center; /* Alinhar itens ao centro */
+}
+
+.menu-icon {
+    display: none; /* Esconder ícone de menu por padrão */
 }
 
 header {
@@ -195,10 +200,11 @@ button:hover, .button:hover {
 
 @media screen and (max-width: 768px) {
     .menu-button {
-        display: block; /* Exibir botão de menu */
-    }
-    .topbar {
+        display: flex; /* Exibir botão de menu */
         justify-content: flex-start; /* Alinhar itens ao início (esquerda) */
+    }
+    .menu-icon {
+        display: block; /* Exibir ícone de menu em dispositivos móveis */
     }
     .topbar ul {
         display: none; /* Não exibir lista por padrão */
@@ -206,6 +212,9 @@ button:hover, .button:hover {
     }
     .topbar.active ul {
         display: flex; /* Exibir lista ao ativar */
+    }
+    .topbar ul li {
+        margin: 10px 0; /* Adicionar margem vertical entre os itens do menu */
     }
     .perfil-image {
         max-width: 100px; /* Largura máxima */
@@ -253,12 +262,12 @@ button:hover, .button:hover {
 }
 
 @media screen and (min-width: 769px) {
+    .menu-button {
+        display: none; /* Esconder botão de menu em telas maiores */
+    }
     .topbar ul {
         display: flex; /* Exibir lista em telas maiores */
         flex-direction: row; /* Direção da flexbox em linha */
-    }
-    .menu-button {
-        display: none; /* Esconder botão de menu em telas maiores */
     }
 }
 

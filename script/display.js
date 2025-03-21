@@ -27,3 +27,21 @@ function toggleMenu() {
     const topbar = document.querySelector('.topbar');
     topbar.classList.toggle('active');
 }
+
+function closeMenu() {
+    const topbar = document.querySelector('.topbar');
+    if (topbar.classList.contains('active')) {
+        topbar.classList.remove('active');
+    }
+}
+
+// Fechar o menu ao clicar em uma opção
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.topbar ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                closeMenu();
+            }
+        });
+    });
+});
