@@ -39,12 +39,8 @@ body {
     list-style-type: none; /* Remover estilo da lista */
     margin: 0; /* Margem zero */
     padding: 0; /* Padding zero */
-    display: none; /* Esconder lista por padrão */
+    display: flex; /* Usar flexbox */
     justify-content: center; /* Centralizar itens */
-}
-
-.topbar.active ul {
-    display: flex; /* Exibir lista ao ativar */
 }
 
 .topbar ul li {
@@ -259,6 +255,7 @@ button:hover, .button:hover {
 @media screen and (min-width: 769px) {
     .topbar ul {
         display: flex; /* Exibir lista em telas maiores */
+        flex-direction: row; /* Direção da flexbox em linha */
     }
     .menu-button {
         display: none; /* Esconder botão de menu em telas maiores */

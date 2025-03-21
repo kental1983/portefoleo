@@ -19,6 +19,7 @@
         @media screen and (min-width: 769px) {
             .topbar ul {
                 display: flex; /* Exibir lista em telas maiores */
+                flex-direction: row; /* Direção da flexbox em linha */
             }
             .menu-button {
                 display: none; /* Esconder botão de menu em telas maiores */
@@ -31,12 +32,12 @@
     <nav class="topbar">
         <button class="menu-button" onclick="toggleMenu()">Menu</button> <!-- Botão de menu -->
         <ul>
-            <li><a href="#home" onclick="toggleMenu()">Início</a></li>
-            <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
-            <li><a href="#projetos" onclick="toggleMenu()">Projetos</a></li>
-            <li><a href="#cv" onclick="toggleMenu()">Currículo</a></li>
-            <li><a href="#recomendacoes" onclick="toggleMenu()">Recomendações</a></li>
-            <li><a href="#contatos" onclick="toggleMenu()">Contactos</a></li>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#cv">Currículo</a></li>
+            <li><a href="#recomendacoes">Recomendações</a></li>
+            <li><a href="#contatos">Contactos</a></li>
         </ul>
     </nav>
     
