@@ -46,5 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Garantir que o menu esteja fechado por padrão em dispositivos móveis
-    closeMenu();
+    if (window.innerWidth <= 768) {
+        closeMenu();
+    }
 });
